@@ -32,6 +32,5 @@ export const toggleDrawer = () => dispatch => {
 
 
 export const initStore = (initialState = defaultInitialState) => {
-	console.log('store init')
 	return createStore(reducer, initialState, composeWithDevTools(applyMiddleware(thunkMiddleware)))
 }

@@ -9,12 +9,21 @@ import withRedux from 'next-redux-wrapper'
 import { initStore, toggleDrawer} from '../store'
 import Drawer from 'material-ui/Drawer'
 import MenuItem from 'material-ui/MenuItem'
+import injectTapEventPlugin from 'react-tap-event-plugin'
+
+
+// Make sure react-tap-event-plugin only gets injected once
+// Needed for material-ui
+if (!process.tapEventInjected) {
+  injectTapEventPlugin()
+  process.tapEventInjected = true
+}
 
 
 class App extends React.Component {
 	render () {
-		const { drawer_open } = this.props
-		const hello = this.onToggleDrawer 
+		const { drawer_open, toggleDrawer } = this.props
+		const hello = this.onToggleDrawer
 
 		return (
 			<div>
@@ -28,10 +37,13 @@ class App extends React.Component {
 						<AppBar 
 							title="Mode"
 							iconClassNameRight="muidocs-icon-navigation-expand-more"
-							onTitleTouchTap={hello}
+							onLeftIconButtonTouchTap={toggleDrawer}
 						/>
 						<h1>{drawer_open}</h1>
-						<Drawer open={drawer_open}>
+						<Drawer open={drawer_open}
+								docked={false}
+								onRequestChange={(open) => toggleDrawer()}
+						>
 							<MenuItem>Home</MenuItem>
 							<MenuItem>Blog</MenuItem>
 							<MenuItem>About</MenuItem>
@@ -42,12 +54,8 @@ class App extends React.Component {
 		)
 	}
 
-	get hello (){
-		return 'hello'	
-	}
-
 	onToggleDrawer () {
-		console.log('hello')
+		console.log(this)
 	}
 }
 
@@ -60,6 +68,6 @@ const mapDispatchToProps = (dispatch) => {
 	}
 }
 
-const ReduxApp = connect(mapStateToProps,mapDispatchToProps)(App)
+const ReduxApp = connect(mapStateToProps, mapDispatchToProps)(App)
 
-export default withRedux(initStore, null, mapDispatchToProps)(ReduxApp)
+export default withRedux(initStore)(ReduxApp)
