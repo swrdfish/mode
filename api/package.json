@@ -1,0 +1,33 @@
+{
+  "name": "peerchat-api-server",
+  "version": "0.0.1",
+  "description": "server for peer to peer chat",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js --exec babel-node --presets es2015,stage-2"
+  },
+  "keywords": [
+    "p2p",
+    "chat"
+  ],
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "express": "*",
+    "firebase-admin": "^5.5.0",
+    "node-uuid": "^1.4.8",
+    "winston": "^2.3.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-stage-2": "^6.22.0",
+    "nodemon": "^1.12.1"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "author": "Binayak<ghoshbinayak@gmail.com> and Kumar<kumargauravgupta3@gmail.com>",
+  "license": "MIT"
+}
