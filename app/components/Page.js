@@ -1,5 +1,5 @@
 export default (props) => (
-    <div id="mainWindow">
+    <div id="main-window" className="row">
     	{props.children}
     </div>
 )

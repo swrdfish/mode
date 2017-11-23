@@ -5,6 +5,8 @@ import fetch from 'isomorphic-fetch'
 
 import Head from 'next/head'
 import Page from '../components/Page.js'
+import Sidebar from '../components/Sidebar.js'
+import MessageArea from '../components/MessageArea.js'
 
 
 class App extends React.Component {
@@ -33,7 +35,7 @@ class App extends React.Component {
     }
 
     render() {
-        return ( 
+        return (
             <Provider store={this.store}>
                 <div>
                     <Head>
@@ -42,7 +44,8 @@ class App extends React.Component {
                         <link rel="stylesheet" href="/static/css/main.css" />
                     </Head>
                     <Page>
-                        <div>Hello</div>
+                        <Sidebar />
+                        <MessageArea />
                     </Page>
                 </div>
             </Provider>

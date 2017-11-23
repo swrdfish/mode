@@ -1,0 +1,1 @@
+export default () => (<div>active users</div>)
