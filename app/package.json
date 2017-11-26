@@ -1,0 +1,27 @@
+{
+  "name": "peerchat",
+  "version": "0.0.1",
+  "description": "simple peer to peer chat application",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "keywords": [
+    "chat",
+    "p2p"
+  ],
+  "author": "Binayak Ghosh <github.com/swrdfish>",
+  "license": "MIT",
+  "dependencies": {
+    "firebase": "^4.6.1",
+    "jquery": "^3.2.1",
+    "next": "^4.1.4",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0"
+  }
+}

@@ -1,0 +1,1 @@
+export default () => (<div>user info</div>)
