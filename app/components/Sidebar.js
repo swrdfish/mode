@@ -8,7 +8,7 @@ import ActiveUsersList from './ActiveUsersList'
 class Sidebar extends React.Component {
     render() {
         return (
-            <div id="sidebar" className="col-md-4">
+            <div id="sidebar" className="col-md-3">
                 <UserInfoDisplay />
                 <SearchBar />
                 <ActiveUsersList />
