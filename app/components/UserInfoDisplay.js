@@ -1,7 +1,7 @@
 import React from 'react';
 
-import UserProfilePicture from './UserProfilePicture.js'
-import UserName from './UserName.js'
+import UserProfilePicture from './UserProfilePicture'
+import UserName from './UserName'
 
 
 class UserInfoDisplay extends React.Component {

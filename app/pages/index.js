@@ -25,13 +25,7 @@ class App extends React.Component {
     async componentWillMount() {
         let res = await fetch('http://localhost/api/room')
         let data = await res.json()
-        console.log('will mount')
         this.data = data
-    }
-
-    componentWillUpdate() {
-        console.log('will update')
-        console.log(this.data)
     }
 
     render() {
@@ -42,6 +36,8 @@ class App extends React.Component {
                         <meta name="viewport" content="width=device-width, initial-scale=1" />
                         <link rel="stylesheet" href="/static/css/bootstrap.css" />
                         <link rel="stylesheet" href="/static/css/main.css" />
+                        <link rel="stylesheet" href="static/css/font-awesome.min.css" />
+                        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" />
                     </Head>
                     <Page>
                         <Sidebar />
