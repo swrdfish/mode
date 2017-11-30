@@ -1,7 +1,9 @@
 import React from 'react'
 import { Provider } from 'react-redux'
-import { reducer, initStore, startClock } from '../store'
+import reducer from '../reducers'
+import { createStore } from 'redux'
 import fetch from 'isomorphic-fetch'
+
 
 import Head from 'next/head'
 import Page from '../components/Page.js'
@@ -11,15 +13,9 @@ import MessageArea from '../components/MessageArea.js'
 
 class App extends React.Component {
 
-    static getInitialProps({ req }) {
-        const isServer = !!req
-        const store = initStore(reducer, null, isServer)
-        return { initialState: store.getState(), isServer }
-    }
-
     constructor(props) {
         super(props)
-        this.store = initStore(reducer, props.initialState, props.isServer)
+        this.store = createStore(reducer)
     }
 
     async componentWillMount() {

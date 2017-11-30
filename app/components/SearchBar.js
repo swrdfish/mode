@@ -1,4 +1,7 @@
 import React from 'react'
+import { connect } from 'react-redux'
+
+import { setContactFilter } from '../actions'
 
 
 class SearchBar extends React.Component{
@@ -13,7 +16,8 @@ class SearchBar extends React.Component{
 	}
 
 	handleOnChange(event) {
-		this.setState({value: event.target.value});
+		this.setState({value: event.target.value})
+		this.props.dispatch(setContactFilter(event.target.value))
 	}
 
 	handleClearSearch(event) {
@@ -43,4 +47,7 @@ class SearchBar extends React.Component{
 		)
 	}
 }
-export default SearchBar;
+
+
+let ConnectedSearchBar = connect()(SearchBar) 
+export default ConnectedSearchBar;

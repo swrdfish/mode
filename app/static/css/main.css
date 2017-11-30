@@ -66,12 +66,12 @@ input.user-name {
 .search-wrapper {
     padding: 10px;
     background: transparent;
-    border: 1px solid #dddddd80;
+    /*border: 1px solid #dddddd80;*/
     border-left: 0;
     border-right: 0;
     display: flex;
     align-items: center;
-    box-shadow: 0px 3px 3px 0px #ececec;
+    box-shadow: 0px 2px 3px 0px #ececec;
 }
 
 .search-wrapper input {
