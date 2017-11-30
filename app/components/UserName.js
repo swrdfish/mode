@@ -19,6 +19,7 @@ class UserName extends React.Component {
 	}
 
 	handleChange(event) {
+		console.log('change')
 		this.setState({value: event.target.value});
 	}
 

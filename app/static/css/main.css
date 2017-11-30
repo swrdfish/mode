@@ -1,6 +1,7 @@
 body {
 	background-image: url("/static/img/bg.jpg");
 	background-size: cover;
+	background-position: center;
 	font-family: 'Lato', sans-serif;
 }
 
@@ -12,6 +13,7 @@ body {
     height: 96vh;
     margin-top: 2vh;
     box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+    overflow: hidden;
 }
 
 @media (max-width: 1440px) {
@@ -26,6 +28,7 @@ body {
 #sidebar {
 	border-right: 1px solid #d8d8d8;
 	padding: 0;
+	overflow: hidden;
 }
 
 .user-info-wrapper {
@@ -58,4 +61,104 @@ input.user-name {
     border: 1px solid #d8d8d8;
     color: black;
     padding-left: 9px;
+}
+
+.search-wrapper {
+    padding: 10px;
+    background: transparent;
+    border: 1px solid #dddddd80;
+    border-left: 0;
+    border-right: 0;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 3px 3px 0px #ececec;
+}
+
+.search-wrapper input {
+    background: transparent;
+    border: 0;
+    color: #424242;
+    flex: 1
+}
+
+.search-wrapper i {
+	color: grey;
+}
+
+i.clear-search {
+	color: #f37878;
+	cursor: pointer;
+}
+
+#message-area {
+	padding: 0;
+	display: flex;
+    flex-direction: column;
+}
+
+.message-view-wrapper {
+	padding: 20px;
+	height: 90%;
+	flex: 1;
+}
+
+.input-area-wrapper {
+	height: 60px;
+	border-top: 1px solid #dddddd80;
+	background-color: #effeff;
+	display: flex;
+	align-items: center;
+	padding: 10px;
+}
+
+.send-button-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  	justify-content: center;
+}
+
+#send-button {
+    background: transparent;
+    right: 10px;
+    font-size: 26px;
+    color: #5151514d;
+    cursor: pointer;
+}
+
+#send-button:hover {
+    color: black;
+}
+
+.input-area-inputfiled {
+	color: black;
+	background: transparent;
+	border: 0;
+	flex: 1;
+}
+
+.contact-list-item {
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+	border-bottom: 1px solid #dddddd80;
+}
+
+.contact-list-item:hover {
+	background: #eee; 
+}
+.contact-profile-picture {
+    height: 50px;
+    width: 50px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.contact-name {
+	padding-left: 20px;
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
 }
