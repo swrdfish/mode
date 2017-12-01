@@ -22,6 +22,7 @@ class SearchBar extends React.Component{
 
 	handleClearSearch(event) {
 		this.setState({value: ''})
+		this.props.dispatch(setContactFilter(''))
 	}
 
 	handleKeyDown(event) {
@@ -29,6 +30,7 @@ class SearchBar extends React.Component{
 			event.stopPropagation()
 			event.preventDefault()
 			this.setState({value: ''})
+			this.props.dispatch(setContactFilter(''))
 		}
 	}
 

@@ -34,6 +34,7 @@ class App extends React.Component {
                         <link rel="stylesheet" href="/static/css/main.css" />
                         <link rel="stylesheet" href="static/css/font-awesome.min.css" />
                         <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" />
+                        <title>Adda</title>
                     </Head>
                     <Page>
                         <Sidebar />

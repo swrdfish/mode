@@ -78,7 +78,8 @@ input.user-name {
     background: transparent;
     border: 0;
     color: #424242;
-    flex: 1
+    flex: 1;
+    outline-color: transparent;
 }
 
 .search-wrapper i {
