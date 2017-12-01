@@ -6,12 +6,12 @@ import ContactList from './ContactList'
 
 
 const activeContacts = [
-    {name: 'bini'},
-    {name: 'atul'},
-    {name: 'sumant'},
-    {name: 'bosana'},
-    {name: 'gibi'},
-    {name: 'kumar'}
+    {name: 'Binayak Ghosh'},
+    {name: 'Atul Aditya'},
+    {name: 'Sumant Motu'},
+    {name: 'Shuvam Bosana'},
+    {name: 'Chiranjiv Roy'},
+    {name: 'Kumar Gaurav'}
 ]
 
 const previousContacts = []

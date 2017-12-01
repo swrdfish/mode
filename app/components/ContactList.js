@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import fuzzysearch from 'fuzzysearch'
 
 import ContactProfilePicture from './ContactProfilePicture.js'
 
@@ -12,7 +13,7 @@ class ContactList extends React.Component {
 	render() {
 		let userToDisplay = this.props.activeContacts
 		if(this.props.searchText !== ''){
-			userToDisplay = userToDisplay.filter(contact => (contact.name.includes(this.props.searchText)))
+			userToDisplay = userToDisplay.filter(contact => (fuzzysearch(this.props.searchText, contact.name.toLowerCase())))
 		}
 
 		let contacts = userToDisplay.map(function (contact) {

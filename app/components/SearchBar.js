@@ -17,7 +17,7 @@ class SearchBar extends React.Component{
 
 	handleOnChange(event) {
 		this.setState({value: event.target.value})
-		this.props.dispatch(setContactFilter(event.target.value))
+		this.props.dispatch(setContactFilter(event.target.value.toLowerCase()))
 	}
 
 	handleClearSearch(event) {
