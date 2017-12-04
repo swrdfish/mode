@@ -112,19 +112,13 @@ i.clear-search {
 	padding: 10px;
 }
 
-.send-button-wrapper {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-  	justify-content: center;
-}
-
-#send-button {
+#attach-button {
     background: transparent;
     right: 10px;
     font-size: 26px;
     color: #5151514d;
     cursor: pointer;
+    margin-right: 10px;
 }
 
 #send-button:hover {
