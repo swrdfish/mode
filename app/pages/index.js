@@ -3,12 +3,14 @@ import { Provider } from 'react-redux'
 import reducer from '../reducers'
 import { createStore } from 'redux'
 import fetch from 'isomorphic-fetch'
+import * as firebase from 'firebase'
 
 
 import Head from 'next/head'
 import Page from '../components/Page.js'
 import Sidebar from '../components/Sidebar.js'
 import MessageArea from '../components/MessageArea.js'
+import clientConfig from '../private/clientSecret.json'
 
 
 class App extends React.Component {
@@ -18,10 +20,14 @@ class App extends React.Component {
         this.store = createStore(reducer)
     }
 
-    async componentWillMount() {
-        let res = await fetch('http://localhost/api/room')
+    async componentDidMount() {
+        firebase.initializeApp(clientConfig)
+        
+        let res  = await fetch('http://localhost/api/auth')
         let data = await res.json()
-        this.data = data
+        firebase.auth().signInWithCustomToken(data.token).catch(error => {
+            console.log(error)
+        })
     }
 
     render() {
