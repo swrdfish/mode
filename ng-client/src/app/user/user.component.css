@@ -1,0 +1,26 @@
+.user-name{
+    font-size: 15px;
+    font-weight: 400;
+}
+.profile {
+    height: 32px;
+    width: 32px;
+    background: #00aabb;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 32px;
+    color:#ffffff;
+}
+.box {
+    padding:5px;
+    border-top: thin solid #CACCCF;
+    border-bottom: thin solid #CACCCF;
+    height:50px;
+    cursor: pointer;
+}
+.user-info {
+    padding:0px;
+}
+.user-status {
+    color: #00aabb;
+}
