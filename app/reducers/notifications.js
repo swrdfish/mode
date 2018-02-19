@@ -3,7 +3,7 @@ const notifications = (state = [], action) => {
     case 'ADD_NOTIFICATION':
       return state.concat({ 'type': action.notificationType, 'msg': action.message})
     case 'DEL_NOTIFICATION':
-      return state.filter( (item, idx) => idx == action.index )
+      return state.filter( (item, idx) => idx != action.index )
     default:
       return state
   }

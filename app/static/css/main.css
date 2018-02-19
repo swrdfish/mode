@@ -188,3 +188,12 @@ i.clear-search {
 .notification.error {
   background: red;
 }
+
+.clear-notification {
+    float: right;
+    line-height: 1.5 !important;
+}
+
+.clear-notification:hover {
+    color: white;
+}
