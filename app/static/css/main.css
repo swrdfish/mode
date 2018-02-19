@@ -113,12 +113,16 @@ i.clear-search {
 }
 
 #attach-button {
-    background: transparent;
-    right: 10px;
-    font-size: 26px;
-    color: #5151514d;
-    cursor: pointer;
-    margin-right: 10px;
+  background: transparent;
+  right: 10px;
+  font-size: 26px;
+  color: #5151514d;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+#attach-button:hover {
+  color: black;  
 }
 
 #send-button:hover {
@@ -156,4 +160,31 @@ i.clear-search {
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
+}
+
+.contact-not-found {
+  color: #aaa;
+  text-align: center;
+  padding: 20px;
+}
+
+.notification-area {
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px;
+}
+
+.notification {
+    padding: 20px;
+    background: #bafcb4;;
+    border-radius: 5px;
+    min-width: 50vw;
+    margin-bottom: 10px;
+}
+
+.notification.error {
+  background: red;
 }

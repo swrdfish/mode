@@ -10,7 +10,9 @@ import Head from 'next/head'
 import Page from '../components/Page.js'
 import Sidebar from '../components/Sidebar.js'
 import MessageArea from '../components/MessageArea.js'
+import NotificationArea from '../components/NotificationArea.js'
 import clientConfig from '../private/clientSecret.json'
+import {login, notify} from '../actions'
 
 
 class App extends React.Component {
@@ -22,12 +24,24 @@ class App extends React.Component {
 
     async componentDidMount() {
         firebase.initializeApp(clientConfig)
-        
-        let res  = await fetch('http://localhost/api/auth')
-        let data = await res.json()
-        firebase.auth().signInWithCustomToken(data.token).catch(error => {
-            console.log(error)
-        })
+        try {
+            let res = await fetch('http://localhost/api/auth')
+            let data = await res.json()
+            let ref = firebase.auth()
+
+            await ref.signInWithCustomToken(data.token)
+            this.store.dispatch(login(ref, "", data.uid, data.ip))
+
+        } catch(error) {
+            this.store.dispatch(notify("failed to authenticate", "error"))
+            console.error("failed to authenticate", error)
+        }
+
+        setupPeerConnection()
+    }
+
+    async setupPeerConnection() {
+
     }
 
     render() {
@@ -43,23 +57,13 @@ class App extends React.Component {
                         <title>Adda</title>
                     </Head>
                     <Page>
+                        <NotificationArea />
                         <Sidebar />
                         <MessageArea />
                     </Page>
                 </div>
             </Provider>
         )
-    }
-
-    checkWebRTCSupport() {
-        return new Ember.RSVP.Promise(function(resolve, reject) {
-            // window.util is a part of PeerJS library
-            if (window.util.supports.sctp) {
-                resolve();
-            } else {
-                reject('browser-unsupported');
-            }
-        });
     }
 }
 

@@ -13,3 +13,22 @@ export const setContactFilter = (username) => ({
   type: 'SET_CONTACT_FILTER',
   username
 })
+
+export const login = (ref, username, uid, publicIp) => ({
+  type: 'LOGIN',
+  ref,
+  username, 
+  uid,
+  publicIp
+})
+
+export const notify = (message, type) => ({
+  type: 'ADD_NOTIFICATION',
+  notificationType: type,
+  message
+})
+
+export const unnotify = (index) => ({
+  type: 'DEL_NOTIFICATION',
+  index
+})

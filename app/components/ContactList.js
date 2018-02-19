@@ -18,7 +18,7 @@ class ContactList extends React.Component {
 
 		let contacts = userToDisplay.map(function (contact) {
 			return (
-				<div className="contact-list-item">
+				<div className="contact-list-item" key={contact.name}>
 					<ContactProfilePicture profilePicture="/static/img/default_contact.jpg" />
 					<div className="contact-name">
 						{contact.name}
@@ -29,7 +29,7 @@ class ContactList extends React.Component {
 
 		return (
 			<div>
-				{(contacts.length > 0)? contacts : 'oops no one there :('}
+				{(contacts.length > 0)? contacts : (<div className="contact-not-found">No contacts found.</div>)}
 			</div>
 		)
 	}
