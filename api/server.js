@@ -22,7 +22,7 @@ app.get("/api/auth", (req, res) => {
         .then(function(customToken) {
             // Send token back to client
             res.json({
-                ip,
+                publicIP: ip,
                 uid,
                 token: customToken
             })
