@@ -24,24 +24,72 @@ class App extends React.Component {
 
     async componentDidMount() {
         firebase.initializeApp(clientConfig)
+        let data
         try {
             let res = await fetch('http://localhost/api/auth')
-            let data = await res.json()
+            data = await res.json()
             let ref = firebase.auth()
 
             await ref.signInWithCustomToken(data.token)
             this.store.dispatch(login(ref, "", data.uid, data.ip))
-
+            this.store.dispatch(notify("Authentication successful", "info"))
         } catch(error) {
             this.store.dispatch(notify("failed to authenticate", "error"))
             console.error("failed to authenticate", error)
         }
 
-        setupPeerConnection()
+        await this.joinRoom(firebase.database(), data)
     }
 
-    async setupPeerConnection() {
+    async joinRoom(firedb, userData) {
+        let room
+        try {
+            let res = await fetch('http://localhost/api/room')
+            room = await res.json()
+        } catch(error) {
+            console.error("failed to get room id: ", error)
+            this.store.dispatch(notify("failed to get room id", "error"))
+        }
 
+        // Setup Firebase refs
+        let connectionRef = firedb.ref('.info/connected')
+        let roomRef = firedb.ref('rooms/' + room.name)
+        let usersRef = roomRef.child('users')
+        let userRef = usersRef.child(userData.uid)
+
+        
+        // Remove yourself from the room when disconnected
+        userRef.onDisconnect().remove()
+        
+        console.log('Joining room: ' + room.name)
+        // Join the room
+        userRef.set(userData, (error) => {
+            if (error) {
+                this.store.dispatch(notify("Firebase: Adding user to the room failed.", "error"))
+                console.error('Firebase: Adding user to the room failed: ', error)
+            } else {
+                this.store.dispatch(notify("Firebase: Successfully added user to the room.", "info"))
+                console.log('Firebase: User added to the room')        
+            }
+        })
+
+        // On child added create a new user in the sidebar
+        usersRef.on('child_added', (snapshot) => {
+            let user = snapshot.val()
+            console.log('Room:\t user_added: ', user)
+        })
+
+        // On child removed remove the user from the sidebar
+        usersRef.on('child_removed',  (snapshot) => {
+            let user = snapshot.val()
+            console.log('Room:\t user_removed: ', user)
+        })
+
+        // On child change
+        userRef.on('child_changed', (snapshot) => {
+            let user = snapshot.val()
+            console.log('Room:\t user_changed: ', user)
+        })
     }
 
     render() {

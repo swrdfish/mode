@@ -14,6 +14,16 @@ export const setContactFilter = (username) => ({
   username
 })
 
+export const addUser = (userData) => ({
+  type: 'ADD_USER',
+  userData
+})
+
+export const removeUser = (userData) => ({
+  type: 'DEL_USER',
+  userData
+})
+
 export const login = (ref, username, uid, publicIp) => ({
   type: 'LOGIN',
   ref,
