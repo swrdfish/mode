@@ -11,14 +11,20 @@ class ContactList extends React.Component {
 	}
 
 	render() {
-		let userToDisplay = this.props.activeContacts
+		let userList = this.props.userList || []
+		let userToDisplay = userList.map(user => ({
+				"name": user.name? user.name : user.localIP,
+				"id": user.uid
+			})
+		)
+
 		if(this.props.searchText !== ''){
 			userToDisplay = userToDisplay.filter(contact => (fuzzysearch(this.props.searchText, contact.name.toLowerCase())))
 		}
 
 		let contacts = userToDisplay.map(function (contact) {
 			return (
-				<div className="contact-list-item" key={contact.name}>
+				<div className="contact-list-item" key={contact.id}>
 					<ContactProfilePicture profilePicture="/static/img/default_contact.jpg" />
 					<div className="contact-name">
 						{contact.name}
@@ -36,8 +42,9 @@ class ContactList extends React.Component {
 }
 
 
-const mapStateToProps = ({contactFilter}) => ({
-  searchText: contactFilter
+const mapStateToProps = ({userList, contactFilter}) => ({
+  searchText: contactFilter,
+  userList
 })
 
 let ConnectedContactList = connect(mapStateToProps)(ContactList) 

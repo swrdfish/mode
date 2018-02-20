@@ -12,7 +12,7 @@ import Sidebar from '../components/Sidebar.js'
 import MessageArea from '../components/MessageArea.js'
 import NotificationArea from '../components/NotificationArea.js'
 import clientConfig from '../private/clientSecret.json'
-import {login, notify} from '../actions'
+import {login, notify, addUser, removeUser, changeUser} from '../actions'
 
 
 class App extends React.Component {
@@ -62,7 +62,9 @@ class App extends React.Component {
         userRef.onDisconnect().remove()
         
         console.log('Joining room: ' + room.name)
+        
         // Join the room
+        userData.localIP = await this.getLocalIP()
         userRef.set(userData, (error) => {
             if (error) {
                 this.store.dispatch(notify("Firebase: Adding user to the room failed.", "error"))
@@ -76,19 +78,34 @@ class App extends React.Component {
         // On child added create a new user in the sidebar
         usersRef.on('child_added', (snapshot) => {
             let user = snapshot.val()
-            console.log('Room:\t user_added: ', user)
+            this.store.dispatch(addUser(user))
         })
 
         // On child removed remove the user from the sidebar
         usersRef.on('child_removed',  (snapshot) => {
             let user = snapshot.val()
-            console.log('Room:\t user_removed: ', user)
+            this.store.dispatch(removeUser(user))
         })
 
         // On child change
         userRef.on('child_changed', (snapshot) => {
             let user = snapshot.val()
             console.log('Room:\t user_changed: ', user)
+        })
+    }
+
+    async getLocalIP() {
+        return new Promise((resolve, reject) => {
+            window.RTCPeerConnection = window.RTCPeerConnection || window.mozRTCPeerConnection || window.webkitRTCPeerConnection   //compatibility for firefox and chrome
+            var pc = new RTCPeerConnection({iceServers:[]}), noop = function(){}      
+            pc.createDataChannel("")    //create a bogus data channel
+            pc.createOffer(pc.setLocalDescription.bind(pc), noop)    // create offer and set local description
+            pc.onicecandidate = function(ice){  //listen for candidate events
+                if(!ice || !ice.candidate || !ice.candidate.candidate)  return
+                var myIP = /([0-9]{1,3}(\.[0-9]{1,3}){3}|[a-f0-9]{1,4}(:[a-f0-9]{1,4}){7})/.exec(ice.candidate.candidate)[1]
+                resolve(myIP)   
+                pc.onicecandidate = noop
+            };
         })
     }
 

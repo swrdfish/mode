@@ -24,6 +24,11 @@ export const removeUser = (userData) => ({
   userData
 })
 
+export const changeUser = (userData) => ({
+  type: 'CHG_USER',
+  userData
+})
+
 export const login = (ref, username, uid, publicIp) => ({
   type: 'LOGIN',
   ref,
