@@ -4,6 +4,7 @@ import auth from './auth'
 import contactFilter from './contactFilter'
 import notifications from './notifications'
 import userList from './userList'
+import chatArea from './chatArea'
 
 
 const peerChatApp = combineReducers({
@@ -11,7 +12,8 @@ const peerChatApp = combineReducers({
   messages,
   contactFilter,
   notifications,
-  userList
+  userList,
+  chatArea
 })
 
 export default peerChatApp

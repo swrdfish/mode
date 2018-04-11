@@ -50,7 +50,6 @@ body {
 span.user-name {
     line-height: 70px;
     padding-left: 10px;
-    vertical-align: middle;
     display: inline-block;
 }
 
@@ -196,4 +195,19 @@ i.clear-search {
 
 .clear-notification:hover {
     color: white;
+}
+
+.presence-active, .presence-inactive {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #00d600;
+    border-radius: 50%;
+    line-height: 70px;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+.presence-inactive {
+    background: grey;
 }

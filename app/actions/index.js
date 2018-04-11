@@ -37,6 +37,11 @@ export const login = (ref, username, uid, publicIp) => ({
   publicIp
 })
 
+export const chat = (uid) => ({
+  type: 'CHAT_USER',
+  uid
+})
+
 export const notify = (message, type) => ({
   type: 'ADD_NOTIFICATION',
   notificationType: type,

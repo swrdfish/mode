@@ -3,11 +3,19 @@ import { connect } from 'react-redux'
 import fuzzysearch from 'fuzzysearch'
 
 import ContactProfilePicture from './ContactProfilePicture.js'
+import { chat } from '../actions'
 
 
 class ContactList extends React.Component {
 	constructor(props){
-		super(props)	
+		super(props)
+		this.handleClick = this.handleClick.bind(this)
+	}
+
+	handleClick(e) {
+		if (e.currentTarget.getAttribute("data-id")) {
+			this.props.dispatch(chat(e.currentTarget.getAttribute("data-id")))
+		}
 	}
 
 	render() {
@@ -24,7 +32,7 @@ class ContactList extends React.Component {
 
 		let contacts = userToDisplay.map(function (contact) {
 			return (
-				<div className="contact-list-item" key={contact.id}>
+				<div className="contact-list-item" key={contact.id} data-id={contact.id} onClick={this.handleClick} >
 					<ContactProfilePicture profilePicture="/static/img/default_contact.jpg" />
 					<div className="contact-name">
 						{contact.name}
@@ -42,9 +50,10 @@ class ContactList extends React.Component {
 }
 
 
-const mapStateToProps = ({userList, contactFilter}) => ({
+const mapStateToProps = ({userList, contactFilter, dispatch}) => ({
   searchText: contactFilter,
-  userList
+  userList,
+  dispatch
 })
 
 let ConnectedContactList = connect(mapStateToProps)(ContactList) 

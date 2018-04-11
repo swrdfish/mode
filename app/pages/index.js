@@ -78,7 +78,9 @@ class App extends React.Component {
         // On child added create a new user in the sidebar
         usersRef.on('child_added', (snapshot) => {
             let user = snapshot.val()
-            this.store.dispatch(addUser(user))
+            if (user.uid !== userData.uid) {
+                this.store.dispatch(addUser(user))
+            }
         })
 
         // On child removed remove the user from the sidebar
