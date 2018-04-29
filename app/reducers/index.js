@@ -5,6 +5,7 @@ import contactFilter from './contactFilter'
 import notifications from './notifications'
 import userList from './userList'
 import chatArea from './chatArea'
+import room from './room'
 
 
 const peerChatApp = combineReducers({
@@ -13,7 +14,8 @@ const peerChatApp = combineReducers({
   contactFilter,
   notifications,
   userList,
-  chatArea
+  chatArea,
+  room
 })
 
 export default peerChatApp

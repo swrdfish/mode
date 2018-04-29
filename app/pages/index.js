@@ -12,7 +12,7 @@ import Sidebar from '../components/Sidebar.js'
 import MessageArea from '../components/MessageArea.js'
 import NotificationArea from '../components/NotificationArea.js'
 import clientConfig from '../private/clientSecret.json'
-import {login, notify, addUser, removeUser, changeUser} from '../actions'
+import {login, notify, addUser, removeUser, changeUser, joinRoom} from '../actions'
 
 
 class App extends React.Component {
@@ -57,6 +57,8 @@ class App extends React.Component {
         let usersRef = roomRef.child('users')
         let userRef = usersRef.child(userData.uid)
 
+        // Make the users ref globally accessible
+        this.store.dispatch(joinRoom(roomRef, usersRef))
         
         // Remove yourself from the room when disconnected
         userRef.onDisconnect().remove()

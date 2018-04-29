@@ -52,3 +52,9 @@ export const unnotify = (index) => ({
   type: 'DEL_NOTIFICATION',
   index
 })
+
+export const joinRoom = (roomRef, usersRef) => ({
+  type: 'JOIN_ROOM',
+  roomRef,
+  usersRef
+})
