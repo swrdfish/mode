@@ -1,0 +1,697 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"user",
+				"usersRef"
+			],
+			[
+				"con",
+				"console"
+			],
+			[
+				"on",
+				"onCreateSessionDescriptionError"
+			],
+			[
+				"chat",
+				"chatArea"
+			],
+			[
+				"Mea",
+				"MessageArea"
+			],
+			[
+				"cla",
+				"className\t(?)"
+			],
+			[
+				"Co",
+				"ConnectedUserInfoDisplay\t(?)"
+			],
+			[
+				"mar",
+				"margin-right"
+			],
+			[
+				"bas",
+				"background-size"
+			],
+			[
+				"backi",
+				"background-image"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"profile",
+				"profilePicID"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"profi",
+				"profilePicID"
+			],
+			[
+				"cha",
+				"chat"
+			],
+			[
+				"ba",
+				"background-position"
+			],
+			[
+				"co",
+				"cover"
+			],
+			[
+				"tra",
+				"transition"
+			],
+			[
+				"tex",
+				"text-decoration"
+			],
+			[
+				"vi",
+				"video"
+			],
+			[
+				"get",
+				"getUserMedia"
+			],
+			[
+				"App",
+				"AppBar"
+			],
+			[
+				"le",
+				"length"
+			],
+			[
+				"s",
+				"symbol"
+			],
+			[
+				"g",
+				"getSQLiteDate(given_date)"
+			],
+			[
+				"sta",
+				"start_date"
+			],
+			[
+				"sym",
+				"symbol"
+			],
+			[
+				"c",
+				"companies"
+			],
+			[
+				"sq",
+				"sqlite3"
+			],
+			[
+				"sto",
+				"stockPrices\t(str)"
+			],
+			[
+				"cs",
+				"csvRow\t(bool)"
+			],
+			[
+				"st",
+				"stmt"
+			],
+			[
+				"re",
+				"return"
+			],
+			[
+				"fo",
+				"found\t(bool)"
+			],
+			[
+				"pars",
+				"parseInt(string, radix?)"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"conta",
+				"contact"
+			],
+			[
+				"class",
+				"className\t(bool)"
+			],
+			[
+				"custome",
+				"customer-menu"
+			],
+			[
+				"custo",
+				"customer-menu"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"cus",
+				"customer-menu"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "app/workers/connectionManager.js",
+			"settings":
+			{
+				"buffer_size": 794,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/pages/index.js",
+			"settings":
+			{
+				"buffer_size": 5290,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/components/MessageViewer.js",
+			"settings":
+			{
+				"buffer_size": 5081,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/workers/storageManager.js",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "rein",
+		"selected_items":
+		[
+			[
+				"rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"ssba",
+				"Set Syntax: JavaScript (Babel)"
+			],
+			[
+				"ssjsx",
+				"Set Syntax: JSX"
+			],
+			[
+				"prett",
+				"HTMLPrettify"
+			],
+			[
+				"sskon",
+				"Set Syntax: Kconfig"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"ssdo",
+				"Set Syntax: Dockerfile"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"ssjsb",
+				"Set Syntax: JavaScript (Babel)"
+			],
+			[
+				"sscoff",
+				"Set Syntax: CoffeeScript"
+			],
+			[
+				"ssjs",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"sspytho",
+				"Set Syntax: Python"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"ssjson",
+				"Set Syntax: JSON"
+			],
+			[
+				"sshtml",
+				"Set Syntax: HTML"
+			],
+			[
+				"ssht",
+				"Set Syntax: HTML"
+			],
+			[
+				"html",
+				"HTMLPrettify"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"ssh",
+				"Set Syntax: Haskell"
+			],
+			[
+				"ssbash",
+				"Set Syntax: Shell Script (Bash)"
+			]
+		],
+		"width": 479.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/binayak/projects/mode",
+		"/home/binayak/projects/mode/app",
+		"/home/binayak/projects/mode/app/workers"
+	],
+	"file_history":
+	[
+		"/home/binayak/projects/mode/app/workers/connection.js",
+		"/home/binayak/projects/mode/mode.sublime-project",
+		"/home/binayak/projects/webrtc-web/step-03/js/main.js",
+		"/home/binayak/projects/mode/app/components/SearchBar.js",
+		"/home/binayak/projects/mode/app/static/css/main.css",
+		"/home/binayak/projects/mode/app/components/UserInfoDisplay.js",
+		"/home/binayak/projects/mode/app/components/ContactList.js",
+		"/home/binayak/projects/mode/app/package.json",
+		"/home/binayak/projects/mode/app/components/MessageArea.js",
+		"/home/binayak/projects/mode/app/components/MessageViewer.js",
+		"/home/binayak/projects/mode/app/actions/index.js",
+		"/home/binayak/projects/mode/app/reducers/chatArea.js",
+		"/home/binayak/projects/mode/app/reducers/index.js",
+		"/home/binayak/projects/mode/app/pages/index.js",
+		"/home/binayak/projects/WorkChat/public/index.html",
+		"/home/binayak/projects/WorkChat/public/js/client.js",
+		"/home/binayak/projects/WorkChat/public/css/style.css",
+		"/home/binayak/projects/webrtc-web/work/js/main.js",
+		"/home/binayak/projects/mode/pages/index.js",
+		"/home/binayak/projects/cometa/app/components/ChartLoader.js",
+		"/home/binayak/projects/cometa/api/migrate/prices.csv",
+		"/home/binayak/projects/stock_archives/api/migrate/companyinfo.csv",
+		"/home/binayak/projects/stock_archives/api/log.txt",
+		"/home/binayak/projects/stock_archives/api/migrate/prices.csv",
+		"/home/binayak/projects/mode/static/css/main.css",
+		"/home/binayak/projects/detect/CMakeFiles/CMakeOutput.log",
+		"/var/www/html/magento/vendor/magento/module-checkout/view/frontend/templates/cart/minicart.phtml",
+		"/var/www/html/magento/var/log/debug.log",
+		"/home/binayak/projects/animate.css/animate.css",
+		"/home/binayak/projects/animate.css/animate-config.json",
+		"/home/binayak/Downloads/animate.css",
+		"/home/binayak/Desktop/onlylogo.svg",
+		"/var/www/html/magento/var/log/system.log",
+		"/var/www/html/magento/vendor/magento/module-theme/view/frontend/templates/html/sections.phtml",
+		"/var/www/html/magento/vendor/magento/module-theme/view/frontend/layout/default.xml",
+		"/var/www/html/magento/vendor/magento/framework/Logger/Handler/Debug.php"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 98.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "app/workers/connectionManager.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 794,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								506,
+								506
+							]
+						],
+						"settings":
+						{
+							"SL.30.region_keys":
+							[
+							],
+							"SL.31.region_keys":
+							[
+							],
+							"open_with_edit": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/pages/index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5290,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2913,
+								2913
+							]
+						],
+						"settings":
+						{
+							"SL.42.region_keys":
+							[
+							],
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 585.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/components/MessageViewer.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5081,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"SL.38.region_keys":
+							[
+							],
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/workers/storageManager.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"SL.40.region_keys":
+							[
+							],
+							"open_with_edit": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.SublimeLinter":
+	{
+		"height": 0.0
+	},
+	"output.SublimeLinter Messages":
+	{
+		"height": 102.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "mode.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"index",
+				"app/pages/index.js"
+			],
+			[
+				"messa",
+				"app/components/MessageViewer.js"
+			],
+			[
+				".css",
+				"app/static/css/main.css"
+			],
+			[
+				"search",
+				"app/components/SearchBar.js"
+			],
+			[
+				"ngi",
+				"nginx.conf"
+			],
+			[
+				"price",
+				"api/migrate/prices.csv"
+			],
+			[
+				"compa",
+				"migrate/companyinfo.csv"
+			],
+			[
+				"",
+				"static/css/main.css"
+			],
+			[
+				"main.css",
+				"static/css/main.css"
+			],
+			[
+				"debug.log",
+				"var/log/debug.log"
+			],
+			[
+				"system.log",
+				"var/log/system.log"
+			],
+			[
+				"minicart.phtml",
+				"vendor/magento/module-checkout/view/frontend/templates/cart/minicart.phtml"
+			],
+			[
+				"debug.php",
+				"vendor/magento/framework/Logger/Handler/Debug.php"
+			],
+			[
+				"customer.phtml",
+				"vendor/magento/module-customer/view/frontend/templates/account/customer.phtml"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/projects/mode/mode.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 379.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
