@@ -183,7 +183,7 @@
 			"file": "app/workers/connectionManager.js",
 			"settings":
 			{
-				"buffer_size": 794,
+				"buffer_size": 5437,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -205,7 +205,10 @@
 			}
 		},
 		{
+			"contents": "",
 			"file": "app/workers/storageManager.js",
+			"file_size": 0,
+			"file_write_time": 131695371112011999,
 			"settings":
 			{
 				"buffer_size": 0,
@@ -330,8 +333,7 @@
 	"expanded_folders":
 	[
 		"/home/binayak/projects/mode",
-		"/home/binayak/projects/mode/app",
-		"/home/binayak/projects/mode/app/workers"
+		"/home/binayak/projects/mode/app"
 	],
 	"file_history":
 	[
@@ -405,7 +407,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -414,19 +416,22 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 794,
+						"buffer_size": 5437,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								506,
-								506
+								682,
+								682
 							]
 						],
 						"settings":
 						{
+							"SL.18.region_keys":
+							[
+							],
 							"SL.30.region_keys":
 							[
 							],
@@ -434,13 +439,15 @@
 							[
 							],
 							"open_with_edit": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -489,8 +496,8 @@
 						"selection":
 						[
 							[
-								0,
-								0
+								535,
+								691
 							]
 						],
 						"settings":
@@ -506,7 +513,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{

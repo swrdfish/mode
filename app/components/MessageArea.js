@@ -7,28 +7,20 @@ import MessageViewer from './MessageViewer.js'
 
 class MessageArea extends React.Component {
     render() {
-        let userRef = null,
-            myRef = null
-
-        if (this.props.chatArea.uid) {
-            userRef = this.props.room.usersRef.child(this.props.chatArea.uid)
-            myRef = this.props.room.usersRef.child(this.props.auth.uid)
-        }
- 
+        let connectionManager = this.props.room.connectionManager
+        let chatter = this.props.chatArea.uid
         return (
             <div id="message-area" className="col-md-9">
-                <MessageViewer userRef={userRef} myRef={myRef} myUid={this.props.auth.uid} />
+                <MessageViewer connectionManager={connectionManager} chatter={chatter} />
                 <InputArea />
             </div>
         )
     }
 }
 
-let mapStateToProps = ({chatArea, userList, room, auth}) => ({
+let mapStateToProps = ({chatArea, room}) => ({
   chatArea,
-  userList,
-  room,
-  auth
+  room
 })
 
 const ConnectedMessageArea = connect(mapStateToProps)(MessageArea)

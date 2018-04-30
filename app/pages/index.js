@@ -7,11 +7,12 @@ import * as firebase from 'firebase'
 
 
 import Head from 'next/head'
-import Page from '../components/Page.js'
-import Sidebar from '../components/Sidebar.js'
-import MessageArea from '../components/MessageArea.js'
-import NotificationArea from '../components/NotificationArea.js'
+import Page from '../components/Page'
+import Sidebar from '../components/Sidebar'
+import MessageArea from '../components/MessageArea'
+import NotificationArea from '../components/NotificationArea'
 import clientConfig from '../private/clientSecret.json'
+import ConnectionManager from '../workers/connectionManager'
 import {login, notify, addUser, removeUser, changeUser, joinRoom} from '../actions'
 
 
@@ -57,8 +58,11 @@ class App extends React.Component {
         let usersRef = roomRef.child('users')
         let userRef = usersRef.child(userData.uid)
 
-        // Make the users ref globally accessible
-        this.store.dispatch(joinRoom(roomRef, usersRef))
+        // Initialize the connection manager
+        let connectionManager = new ConnectionManager(usersRef, userRef, userData.uid)
+
+        // Make the room ref and connection manager globally accessible
+        this.store.dispatch(joinRoom(connectionManager, roomRef))
         
         // Remove yourself from the room when disconnected
         userRef.onDisconnect().remove()

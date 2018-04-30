@@ -3,7 +3,7 @@ const room = (state = {}, action) => {
     case 'JOIN_ROOM':
       return {
         roomRef: action.roomRef,
-        usersRef: action.usersRef
+        connectionManager: action.connectionManager
       }
     default:
       return state

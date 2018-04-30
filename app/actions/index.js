@@ -53,8 +53,8 @@ export const unnotify = (index) => ({
   index
 })
 
-export const joinRoom = (roomRef, usersRef) => ({
+export const joinRoom = (connectionManager, roomRef) => ({
   type: 'JOIN_ROOM',
-  roomRef,
-  usersRef
+  connectionManager,
+  roomRef
 })
