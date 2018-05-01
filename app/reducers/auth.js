@@ -1,22 +1,22 @@
 const auth = (state = {}, action) => {
   switch (action.type) {
     case 'LOGIN':
-      let auth = {
+    let auth = {
         ref: action.ref,
         uid: action.uid,
         publicIp: action.publicIp
-      }
-      if (action.username) {
+    }
+    if (action.username) {
         auth.username = action.username
-      }
-      return auth
+    }
+    return auth
 
     case 'LOGOUT':
-      return {}
+    return {}
 
     default:
-      return state
-  }
+    return state
+}
 }
 
 export default auth

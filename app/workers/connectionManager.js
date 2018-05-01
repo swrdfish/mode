@@ -1,3 +1,6 @@
+import {addMessage} from '../actions'
+
+
 const servers = { // Allows for RTC server configuration (STUN and TURN).
     iceServers: [
         {urls:'stun:stun.l.google.com'},
@@ -12,12 +15,20 @@ const servers = { // Allows for RTC server configuration (STUN and TURN).
 const pcConstraint = null
 const dataConstraint = null            
 
+const createSessionDescriptoin = (desc) => {
+    if(window.RTCSessionDescription) {
+        return new RTCSessionDescription(desc)
+    } else {
+        return desc
+    }
+}
 
 class ConnectionManager {
-    constructor(usersRef, myRef, myUid) {
+    constructor(usersRef, myRef, myUid, dispatch) {
         this.usersRef = usersRef
         this.myRef = myRef
         this.myUid = myUid
+        this.dispatch = dispatch
         this.myConnectionRef = myRef.child('connections')
         this.connections = {}
         
@@ -36,7 +47,7 @@ class ConnectionManager {
             let localConnection = this.connections[conn.sender].localPeerConnection
             for(let ice in conn.iceCandidates) {
                 console.log('add iceCandidates: ', conn.iceCandidates[ice]) 
-                localConnection.addIceCandidate(new RTCIceCandidate(conn.iceCandidates[ice])) 
+                localConnection.addIceCandidate(new RTCIceCandidate(conn.iceCandidates[ice]))
             }
         }
     }
@@ -50,16 +61,13 @@ class ConnectionManager {
                 usersRef: this.usersRef,
                 connections: this.connections,
                 myRef: this.myRef,
-                myUid: this.myUid
+                myUid: this.myUid,
+                dispatch: this.dispatch
             }
 
             if(!this.connections[conn.sender]) {
                 let localPeerConnection = new RTCPeerConnection(servers, pcConstraint)
                 let dataChannel = localPeerConnection.createDataChannel('sendDataChannel', dataConstraint)
-
-                // make data Channel available for testing
-                // TODO: remove this
-                window.dataChannel = dataChannel
 
                 this.connections[conn.sender] = {
                     localPeerConnection,
@@ -74,7 +82,7 @@ class ConnectionManager {
             }
 
             let localConnection = this.connections[conn.sender].localPeerConnection
-            localConnection.setRemoteDescription(new RTCSessionDescription(conn.offer))
+            localConnection.setRemoteDescription(createSessionDescriptoin(conn.offer))
 
             localConnection.createAnswer().then(
                 this._onCreateAnswer.bind(context),
@@ -82,7 +90,7 @@ class ConnectionManager {
             )
         } else if(conn.answer) {
             let localConnection = this.connections[conn.sender].localPeerConnection
-            localConnection.setRemoteDescription(new RTCSessionDescription(conn.answer))            
+            localConnection.setRemoteDescription(createSessionDescriptoin(conn.answer))            
         }
     }
 
@@ -91,9 +99,14 @@ class ConnectionManager {
         let connRef = userRef.child('connections/' + this.myUid)
         this.connections[this.uid].localPeerConnection.setLocalDescription(desc)
         
+        connRef.onDisconnect().remove()
+        
         connRef.set({
             sender: this.myUid, 
-            offer: desc.toJSON()
+            offer: {
+                sdp: desc.sdp,
+                type: desc.type
+            }
         })
 
         console.log('createOffer', desc)
@@ -104,9 +117,14 @@ class ConnectionManager {
         let connRef = userRef.child('connections/' + this.myUid)
         this.connections[this.uid].localPeerConnection.setLocalDescription(desc)
         
+        connRef.onDisconnect().remove()
+
         connRef.set({
             sender: this.myUid, 
-            answer: desc.toJSON()
+            answer: {
+                sdp: desc.sdp,
+                type: desc.type
+            }
         })
 
         console.log('createAnswer', desc)
@@ -123,7 +141,7 @@ class ConnectionManager {
                 sdpMid: event.candidate.sdpMid,
                 candidate: event.candidate.candidate
             }
-
+            connRef.child('sender').set(this.myUid)
             iceRef.push(iceCandidate)
         }
     }
@@ -139,6 +157,7 @@ class ConnectionManager {
     _onDataChannel(event) {
         let receiver = event.channel
         receiver.onmessage = (e) => {
+            this.dispatch(addMessage(this.uid, e.data, false))
             console.log(e.data)
         }
     }
@@ -149,7 +168,8 @@ class ConnectionManager {
             usersRef: this.usersRef,
             connections: this.connections,
             myRef: this.myRef,
-            myUid: this.myUid
+            myUid: this.myUid,
+            dispatch: this.dispatch
         }
 
         // Create peer connection.
@@ -173,8 +193,6 @@ class ConnectionManager {
         dataChannel.onopen = this._onSendChannelStateChange
         dataChannel.onclose = this._onSendChannelStateChange
         
-
-        window.sender = dataChannel
 
         var mediaConstraints = {
             mandatory: {
@@ -205,5 +223,10 @@ class ConnectionManager {
         console.log('close the connection for the user: ', uid)
     }
 }
+
+
+const mapStateToProps = ({dispatch}) => ({
+  dispatch
+})
 
 export default ConnectionManager

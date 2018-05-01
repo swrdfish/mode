@@ -1,7 +1,8 @@
-export const addMessage = (uid, text) => ({
+export const addMessage = (uid, text, isMine) => ({
   type: 'ADD_MSG',
   uid,
-  text
+  text,
+  isMine
 })
 
 export const deleteMessage = (id) => ({

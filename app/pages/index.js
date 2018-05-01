@@ -59,7 +59,7 @@ class App extends React.Component {
         let userRef = usersRef.child(userData.uid)
 
         // Initialize the connection manager
-        let connectionManager = new ConnectionManager(usersRef, userRef, userData.uid)
+        let connectionManager = new ConnectionManager(usersRef, userRef, userData.uid, this.store.dispatch)
 
         // Make the room ref and connection manager globally accessible
         this.store.dispatch(joinRoom(connectionManager, roomRef))

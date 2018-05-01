@@ -211,3 +211,21 @@ i.clear-search {
 .presence-inactive {
     background: grey;
 }
+
+.message-bubble.mine {
+    background: #efefef;
+    margin: 5px;
+    width: 90%;
+    float: right;
+    padding: 10px 10px 10px 20px;
+    border-radius: 15px 15px 0 15px;
+}
+
+.message-bubble {
+    margin: 5px;
+    width: 90%;
+    float: left;
+    padding: 10px 10px 10px 20px;
+    border-radius: 0 15px 15px 15px;
+    background: #c9eded;
+}
