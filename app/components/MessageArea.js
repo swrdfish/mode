@@ -37,11 +37,12 @@ class MessageArea extends React.Component {
     render() {
         let chatter = this.props.chatArea.uid
         let messages = this.props.messages[chatter]
+        let inputArea = (<InputArea onSendMessage={this.onSendMessage} />)
 
         return (
-            <div id="message-area" className="col-md-9">
+            <div id="message-area" className="col-md-8">
                 <MessageViewer chatter={chatter} messages={messages} />
-                <InputArea onSendMessage={this.onSendMessage} />
+                {chatter?inputArea:''}        
             </div>
         )
     }

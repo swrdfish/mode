@@ -8,7 +8,7 @@ import ContactList from './ContactList'
 class Sidebar extends React.Component {
     render() {
         return (
-            <div id="sidebar" className="col-md-3">
+            <div id="sidebar" className="col-md-4">
                 <UserInfoDisplay />
                 <SearchBar />
                 <ContactList />

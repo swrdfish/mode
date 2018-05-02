@@ -35,7 +35,7 @@ class InputArea extends React.Component {
                     onKeyPress={this.handleKeyPress} 
                     onChange={this.handleChange} />
 
-				<i className="fa fa-reply" id="attach-button" aria-hidden="true"></i>
+				<i className="fa fa-paperclip" id="attach-button" aria-hidden="true"></i>
 			</div>
 		)
 	}
