@@ -27,7 +27,7 @@ class App extends React.Component {
         firebase.initializeApp(clientConfig)
         let data
         try {
-            let res = await fetch('http://localhost/api/auth')
+            let res = await fetch('/api/auth')
             data = await res.json()
             let ref = firebase.auth()
 
@@ -45,7 +45,7 @@ class App extends React.Component {
     async joinRoom(firedb, userData) {
         let room
         try {
-            let res = await fetch('http://localhost/api/room')
+            let res = await fetch('/api/room')
             room = await res.json()
         } catch(error) {
             console.error("failed to get room id: ", error)
