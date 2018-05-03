@@ -8,17 +8,18 @@ import { setContactFilter } from '../actions'
 
 class UserInfoDisplay extends React.Component {
   
-  constructor(props) {
-    super(props)
-  }
+    constructor(props) {
+        super(props)
+    }
 
 	render() {
+    let username = this.props.auth.localIP
     let presence = (this.props.auth.uid !== undefined)? "presence-active" : "presence-inactive"
 		return (
 			<div className="user-info-wrapper">
 				<UserProfilePicture />
-				<UserName />
-        <span className={presence} />
+				<UserName value={this.props.auth.localIP}/>
+                <span className={presence} />
 			</div>
 		)
 	}

@@ -4,7 +4,7 @@ const auth = (state = {}, action) => {
     let auth = {
         ref: action.ref,
         uid: action.uid,
-        publicIp: action.publicIp
+        localIP: action.localIP
     }
     if (action.username) {
         auth.username = action.username

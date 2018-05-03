@@ -5,7 +5,7 @@ class UserName extends React.Component {
 	constructor(props) {
 		super(props)
 		this.state = {editMode: 'OFF',
-					  value: 'Timon'}
+					  value: 'connecting..'}
 
 		//bind event handlers to this
 		this.handleSpanOnClick = this.handleSpanOnClick.bind(this)
@@ -14,12 +14,23 @@ class UserName extends React.Component {
 		this.handleKeyPress = this.handleKeyPress.bind(this)
 	}
 
+	// componentWillUpdate() {
+	// 	this.setState({
+	// 		value: this.props.value?this.props.value:'anonymous'
+	// 	})
+	// }
+
+	static getDerivedStateFromProps(nextProps) {
+		return {
+			value: nextProps.value?nextProps.value:'connecting..'
+		}
+	}
+
 	handleSpanOnClick() {
 		this.setState({editMode: 'ON'})
 	}
 
 	handleChange(event) {
-		console.log('change')
 		this.setState({value: event.target.value});
 	}
 

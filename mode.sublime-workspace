@@ -4,6 +4,30 @@
 		"selected_items":
 		[
 			[
+				"use",
+				"userData"
+			],
+			[
+				"conne",
+				"connectionManager"
+			],
+			[
+				"s",
+				"span"
+			],
+			[
+				"u",
+				"user"
+			],
+			[
+				"sta",
+				"state"
+			],
+			[
+				"item",
+				"itemRendered"
+			],
+			[
 				"time",
 				"timeStamp"
 			],
@@ -40,10 +64,6 @@
 				"className"
 			],
 			[
-				"u",
-				"uid"
-			],
-			[
 				"add",
 				"addMessage"
 			],
@@ -54,10 +74,6 @@
 			[
 				"R",
 				"RTCSessionDescription"
-			],
-			[
-				"s",
-				"sdp"
 			],
 			[
 				"_on",
@@ -116,10 +132,6 @@
 				"userRef"
 			],
 			[
-				"use",
-				"userRef"
-			],
-			[
 				"_",
 				"_iceCallback"
 			],
@@ -150,10 +162,6 @@
 			[
 				"roo",
 				"rooms"
-			],
-			[
-				"conne",
-				"ConnectionManager"
 			],
 			[
 				"data",
@@ -240,10 +248,6 @@
 				"getSQLiteDate(given_date)"
 			],
 			[
-				"sta",
-				"start_date"
-			],
-			[
 				"sym",
 				"symbol"
 			],
@@ -307,7 +311,7 @@
 			"file": "app/workers/connectionManager.js",
 			"settings":
 			{
-				"buffer_size": 7311,
+				"buffer_size": 7279,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -324,7 +328,25 @@
 			"file": "app/reducers/messages.js",
 			"settings":
 			{
-				"buffer_size": 789,
+				"buffer_size": 861,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/reducers/chatArea.js",
+			"settings":
+			{
+				"buffer_size": 404,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/reducers/userList.js",
+			"settings":
+			{
+				"buffer_size": 909,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -342,7 +364,16 @@
 			"file": "app/pages/index.js",
 			"settings":
 			{
-				"buffer_size": 5492,
+				"buffer_size": 5200,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/components/ContactList.js",
+			"settings":
+			{
+				"buffer_size": 2394,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -360,7 +391,7 @@
 			"file": "app/actions/index.js",
 			"settings":
 			{
-				"buffer_size": 975,
+				"buffer_size": 1015,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -369,7 +400,7 @@
 			"file": "app/components/MessageViewer.js",
 			"settings":
 			{
-				"buffer_size": 1341,
+				"buffer_size": 1420,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -395,7 +426,7 @@
 			"file": "app/components/InputArea.js",
 			"settings":
 			{
-				"buffer_size": 1109,
+				"buffer_size": 1050,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -404,7 +435,7 @@
 			"file": "app/static/css/main.css",
 			"settings":
 			{
-				"buffer_size": 4156,
+				"buffer_size": 4450,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -413,7 +444,7 @@
 			"file": "app/components/MessageArea.js",
 			"settings":
 			{
-				"buffer_size": 1721,
+				"buffer_size": 1388,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -426,10 +457,18 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 392.0,
-		"last_filter": "rein",
+		"height": 244.0,
+		"last_filter": "pretty",
 		"selected_items":
 		[
+			[
+				"pretty",
+				"HTMLPrettify: Set Prettify Preferences"
+			],
+			[
+				"re",
+				"Indentation: Reindent Lines"
+			],
 			[
 				"rein",
 				"Indentation: Reindent Lines"
@@ -539,12 +578,14 @@
 		"/home/binayak/projects/mode/app",
 		"/home/binayak/projects/mode/app/actions",
 		"/home/binayak/projects/mode/app/components",
+		"/home/binayak/projects/mode/app/pages",
 		"/home/binayak/projects/mode/app/reducers",
 		"/home/binayak/projects/mode/app/static",
 		"/home/binayak/projects/mode/app/static/css"
 	],
 	"file_history":
 	[
+		"/home/binayak/.config/sublime-text-3/Packages/HTML-CSS-JS Prettify/.jsbeautifyrc.defaults.json",
 		"/home/binayak/projects/mode/app/pages/_document.js",
 		"/home/binayak/projects/mode/app/workers/storageManager.js",
 		"/home/binayak/projects/mode/app/workers/connection.js",
@@ -601,6 +642,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"notify",
 			"localhost",
 			"api",
 			"addmess",
@@ -639,7 +681,7 @@
 	"groups":
 	[
 		{
-			"selected": 11,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -648,15 +690,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7311,
+						"buffer_size": 7279,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2860,
-								2860
+								7092,
+								7107
 							]
 						],
 						"settings":
@@ -682,10 +724,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 756.0,
+						"translation.y": 3181.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -707,6 +749,9 @@
 						],
 						"settings":
 						{
+							"SL.15.region_keys":
+							[
+							],
 							"SL.16.region_keys":
 							[
 							],
@@ -721,7 +766,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 13,
 					"type": "text"
 				},
 				{
@@ -730,19 +775,22 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 789,
+						"buffer_size": 861,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								381,
-								390
+								758,
+								758
 							]
 						],
 						"settings":
 						{
+							"SL.16.region_keys":
+							[
+							],
 							"SL.38.region_keys":
 							[
 							],
@@ -754,11 +802,73 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
 					"buffer": 3,
+					"file": "app/reducers/chatArea.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 404,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								314,
+								314
+							]
+						],
+						"settings":
+						{
+							"SL.35.region_keys":
+							[
+							],
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/reducers/userList.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 909,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								257,
+								257
+							]
+						],
+						"settings":
+						{
+							"SL.31.region_keys":
+							[
+							],
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
 					"file": "app/reducers/auth.js",
 					"semi_transient": false,
 					"settings":
@@ -790,24 +900,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 14,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 6,
 					"file": "app/pages/index.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5492,
+						"buffer_size": 5200,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1538,
-								1538
+								3388,
+								3233
 							]
 						],
 						"settings":
@@ -829,14 +939,46 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 135.0,
+						"translation.y": 765.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 7,
+					"file": "app/components/ContactList.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2394,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								673,
+								673
+							]
+						],
+						"settings":
+						{
+							"SL.28.region_keys":
+							[
+							],
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
 					"file": "app/reducers/room.js",
 					"semi_transient": false,
 					"settings":
@@ -857,6 +999,9 @@
 							"SL.16.region_keys":
 							[
 							],
+							"SL.19.region_keys":
+							[
+							],
 							"SL.24.region_keys":
 							[
 							],
@@ -866,29 +1011,32 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 12,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 9,
 					"file": "app/actions/index.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 975,
+						"buffer_size": 1015,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								94,
-								94
+								449,
+								449
 							]
 						],
 						"settings":
 						{
 							"SL.17.region_keys":
+							[
+							],
+							"SL.20.region_keys":
 							[
 							],
 							"SL.22.region_keys":
@@ -905,24 +1053,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 10,
 					"file": "app/components/MessageViewer.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1341,
+						"buffer_size": 1420,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								526,
-								526
+								987,
+								987
 							]
 						],
 						"settings":
@@ -947,11 +1095,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 11,
 					"file": "app/components/Sidebar.js",
 					"semi_transient": false,
 					"settings":
@@ -969,6 +1117,9 @@
 						],
 						"settings":
 						{
+							"SL.22.region_keys":
+							[
+							],
 							"SL.28.region_keys":
 							[
 							],
@@ -978,11 +1129,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 12,
 					"file": "app/components/UserName.js",
 					"semi_transient": false,
 					"settings":
@@ -1000,6 +1151,9 @@
 						],
 						"settings":
 						{
+							"SL.23.region_keys":
+							[
+							],
 							"SL.55.region_keys":
 							[
 							],
@@ -1010,29 +1164,32 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 15,
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 13,
 					"file": "app/components/InputArea.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1109,
+						"buffer_size": 1050,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1020,
-								1020
+								303,
+								303
 							]
 						],
 						"settings":
 						{
 							"SL.23.region_keys":
+							[
+							],
+							"SL.24.region_keys":
 							[
 							],
 							"SL.56.region_keys":
@@ -1044,24 +1201,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 14,
 					"file": "app/static/css/main.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4156,
+						"buffer_size": 4450,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4151,
-								4151
+								4409,
+								4409
 							]
 						],
 						"settings":
@@ -1069,32 +1226,35 @@
 							"SL.24.region_keys":
 							[
 							],
+							"SL.25.region_keys":
+							[
+							],
 							"syntax": "Packages/CSS/CSS.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3096.0,
+						"translation.y": 3186.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
-					"buffer": 12,
+					"buffer": 15,
 					"file": "app/components/MessageArea.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1721,
+						"buffer_size": 1388,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1448,
-								1448
+								346,
+								346
 							]
 						],
 						"settings":
@@ -1103,6 +1263,9 @@
 							[
 							],
 							"SL.25.region_keys":
+							[
+							],
+							"SL.26.region_keys":
 							[
 							],
 							"SL.27.region_keys":
@@ -1116,7 +1279,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 6,
 					"type": "text"
 				}
 			]
@@ -1178,6 +1341,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"inpur",
+				"app/components/InputArea.js"
+			],
 			[
 				"",
 				"app/static/css/main.css"

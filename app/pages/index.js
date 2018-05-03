@@ -32,8 +32,8 @@ class App extends React.Component {
             let ref = firebase.auth()
 
             await ref.signInWithCustomToken(data.token)
-            this.store.dispatch(login(ref, "", data.uid, data.ip))
-            this.store.dispatch(notify("Authentication successful", "info"))
+            data.localIP = await this.getLocalIP()
+            this.store.dispatch(login(ref, "", data.uid, data.localIP))
         } catch(error) {
             this.store.dispatch(notify("failed to authenticate", "error"))
             console.error("failed to authenticate", error)
@@ -66,18 +66,12 @@ class App extends React.Component {
         
         // Remove yourself from the room when disconnected
         userRef.onDisconnect().remove()
-        
-        console.log('Joining room: ' + room.name)
-        
+                
         // Join the room
-        userData.localIP = await this.getLocalIP()
         userRef.set(userData, (error) => {
             if (error) {
                 this.store.dispatch(notify("Firebase: Adding user to the room failed.", "error"))
                 console.error('Firebase: Adding user to the room failed: ', error)
-            } else {
-                this.store.dispatch(notify("Firebase: Successfully added user to the room.", "info"))
-                console.log('Firebase: User added to the room')        
             }
         })
 
@@ -92,14 +86,14 @@ class App extends React.Component {
         // On child removed remove the user from the sidebar
         usersRef.on('child_removed',  (snapshot) => {
             let user = snapshot.val()
-            this.store.dispatch(removeUser(user))
+            this.store.dispatch(removeUser(user, connectionManager))
         })
 
         // On child change
-        userRef.on('child_changed', (snapshot) => {
-            let user = snapshot.val()
-            console.log('Room:\t user_changed: ', user)
-        })
+        // userRef.on('child_changed', (snapshot) => {
+        //     let user = snapshot.val()
+        //     console.log('Room:\t user_changed: ', user)
+        // })
     }
 
     async getLocalIP() {

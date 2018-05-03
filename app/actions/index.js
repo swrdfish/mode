@@ -20,9 +20,10 @@ export const addUser = (userData) => ({
   userData
 })
 
-export const removeUser = (userData) => ({
+export const removeUser = (userData, connectionManager) => ({
   type: 'DEL_USER',
-  userData
+  userData,
+  connectionManager
 })
 
 export const changeUser = (userData) => ({
@@ -30,12 +31,12 @@ export const changeUser = (userData) => ({
   userData
 })
 
-export const login = (ref, username, uid, publicIp) => ({
+export const login = (ref, username, uid, localIP) => ({
   type: 'LOGIN',
   ref,
   username, 
   uid,
-  publicIp
+  localIP
 })
 
 export const chat = (uid) => ({

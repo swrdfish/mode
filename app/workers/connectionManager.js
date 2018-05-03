@@ -46,7 +46,6 @@ class ConnectionManager {
         if(conn.iceCandidates) {
             let localConnection = this.connections[conn.sender].localPeerConnection
             for(let ice in conn.iceCandidates) {
-                console.log('add iceCandidates: ', conn.iceCandidates[ice]) 
                 localConnection.addIceCandidate(new RTCIceCandidate(conn.iceCandidates[ice]))
             }
         }
@@ -54,7 +53,6 @@ class ConnectionManager {
 
     _handleConnectionRequest(snapshot) {
         let conn = snapshot.val()
-        console.log("connection manager: _handleConnectionRequest ", conn)
         if(conn.offer) {
             let context = {
                 uid: conn.sender,
@@ -108,8 +106,6 @@ class ConnectionManager {
                 type: desc.type
             }
         })
-
-        console.log('createOffer', desc)
     }
 
     _onCreateAnswer(desc) {        
@@ -126,8 +122,6 @@ class ConnectionManager {
                 type: desc.type
             }
         })
-
-        console.log('createAnswer', desc)
     }
 
     _iceCallback(event) {
@@ -158,7 +152,6 @@ class ConnectionManager {
         let receiver = event.channel
         receiver.onmessage = (e) => {
             this.dispatch(addMessage(this.uid, e.data, false))
-            console.log(e.data)
         }
     }
 
@@ -220,7 +213,11 @@ class ConnectionManager {
     }
 
     closeConnection(uid) {
-        console.log('close the connection for the user: ', uid)
+        let conn = this.getConnection(uid)
+        conn.dataChannel.close()
+        conn.localPeerConnection.close()
+        conn.dataChannel = null
+        conn.localPeerConnection = null
     }
 }
 

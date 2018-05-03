@@ -11,7 +11,6 @@ class InputArea extends React.Component {
     }
 
     handleKeyPress(event) {
-        console.log('press')
         if(event.key == 'Enter'){
             event.preventDefault()
             this.props.onSendMessage(this.state.value)
@@ -20,7 +19,6 @@ class InputArea extends React.Component {
     }
 
     handleChange(event) {
-        console.log('change')
         this.setState({value: event.target.value})
     }
 

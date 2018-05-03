@@ -1,5 +1,4 @@
 const messages = (state = {}, action) => {
-    console.log("reducer", action.type)
     switch (action.type) {
         case 'ADD_MSG':
             let newState = {...state}
@@ -11,7 +10,6 @@ const messages = (state = {}, action) => {
                 text: action.text,
                 timeStamp: new Date(),
                 sent: false,
-                seen: false,
                 isMine: action.isMine
             })
             return newState
@@ -21,6 +19,10 @@ const messages = (state = {}, action) => {
         case 'SEE_MSG':
             //modify the seen state
             return state
+        case 'DEL_USER':
+            newState = {...state}
+            newState[action.userData.uid] = undefined
+            return newState
         default:
             return state
     }

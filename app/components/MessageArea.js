@@ -12,18 +12,6 @@ class MessageArea extends React.Component {
         this.onSendMessage= this.onSendMessage.bind(this)
     }
 
-    componentDidmount() {
-        if(this.props.chatArea.uid) {
-            this.props.room.connectionManager.getConnection(this.props.chatArea.uid)
-        }
-    }
-
-    componentDidUpdate() {
-        if(this.props.chatArea.uid) {
-            this.props.room.connectionManager.getConnection(this.props.chatArea.uid)
-        }
-    }
-
     onSendMessage(msg) {
         if(this.props.chatArea.uid && msg) {
             let connection = this.props.room.connectionManager.getConnection(this.props.chatArea.uid)
