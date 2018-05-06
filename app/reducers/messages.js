@@ -1,3 +1,6 @@
+import { v4 } from 'node-uuid'
+
+
 const messages = (state = {}, action) => {
     switch (action.type) {
         case 'ADD_MSG':
@@ -10,7 +13,8 @@ const messages = (state = {}, action) => {
                 text: action.text,
                 timeStamp: new Date(),
                 sent: false,
-                isMine: action.isMine
+                isMine: action.isMine,
+                id: v4()
             })
             return newState
         case 'AKN_MSG':

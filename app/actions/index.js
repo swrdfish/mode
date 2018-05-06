@@ -60,3 +60,8 @@ export const joinRoom = (connectionManager, roomRef) => ({
   connectionManager,
   roomRef
 })
+
+export const setUsername = (username) => ({
+  type: 'SET_USERNAME',
+  username
+})

@@ -90,10 +90,10 @@ class App extends React.Component {
         })
 
         // On child change
-        // userRef.on('child_changed', (snapshot) => {
-        //     let user = snapshot.val()
-        //     console.log('Room:\t user_changed: ', user)
-        // })
+        usersRef.on('child_changed', (snapshot) => {
+            let user = snapshot.val()
+            this.store.dispatch(changeUser(user))
+        })
     }
 
     async getLocalIP() {
@@ -117,11 +117,12 @@ class App extends React.Component {
                 <div>
                     <Head>
                         <meta name="viewport" content="width=device-width, initial-scale=1" />
+                        <link rel='shortcut icon' type='image/x-icon' href='/static/img/favicon.ico' />
                         <link rel="stylesheet" href="/static/css/bootstrap.css" />
                         <link rel="stylesheet" href="/static/css/main.css" />
                         <link rel="stylesheet" href="static/css/font-awesome.min.css" />
                         <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" />
-                        <title>Adda</title>
+                        <title>হিজিবিজি (HiJiBiJi)</title>
                     </Head>
                     <Page>
                         <NotificationArea />

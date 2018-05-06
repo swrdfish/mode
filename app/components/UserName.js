@@ -14,12 +14,6 @@ class UserName extends React.Component {
 		this.handleKeyPress = this.handleKeyPress.bind(this)
 	}
 
-	// componentWillUpdate() {
-	// 	this.setState({
-	// 		value: this.props.value?this.props.value:'anonymous'
-	// 	})
-	// }
-
 	static getDerivedStateFromProps(nextProps) {
 		return {
 			value: nextProps.value?nextProps.value:'connecting..'
@@ -41,6 +35,7 @@ class UserName extends React.Component {
 	handleKeyPress(event) {
 		if(event.key == 'Enter'){
 			this.setState({editMode: 'OFF'})
+			this.props.onUpdateUsername(this.state.value)
 		}
 	}
 

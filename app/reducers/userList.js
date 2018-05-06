@@ -6,6 +6,18 @@ const userList = (state = [], action) => {
             //close rtc connection
             action.connectionManager.closeConnection(action.userData.uid)
             return state.filter(user => user.uid != action.userData.uid)
+        case 'CHG_USER':
+            return state.map(user => {
+                if(action.userData.uid == user.uid) {
+                    return {
+                        ...action.userData,
+                        selected: user.selected,
+                        unseen: user.unseen
+                    }
+                } else {
+                    return user
+                }
+            })
         case 'ADD_MSG':
             return state.map(user => {
                 if(action.uid == user.uid && !user.selected) {

@@ -27,7 +27,7 @@ class ContactList extends React.Component {
     render() {  
         let userList = this.props.userList || []
         let userToDisplay = userList.map(user => ({
-                "name": user.name? user.name : user.localIP,
+                "name": user.username? user.username : user.localIP,
                 "id": user.uid,
                 "unseen": user.unseen
             })

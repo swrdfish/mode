@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"lo",
+				"localIP"
+			],
+			[
+				"v",
+				"value"
+			],
+			[
+				"get",
+				"getConnection"
+			],
+			[
 				"use",
 				"userData"
 			],
@@ -78,10 +90,6 @@
 			[
 				"_on",
 				"_onDataChannel"
-			],
-			[
-				"lo",
-				"localPeerConnection"
 			],
 			[
 				"h",
@@ -232,10 +240,6 @@
 				"video"
 			],
 			[
-				"get",
-				"getUserMedia"
-			],
-			[
 				"App",
 				"AppBar"
 			],
@@ -311,7 +315,7 @@
 			"file": "app/workers/connectionManager.js",
 			"settings":
 			{
-				"buffer_size": 7279,
+				"buffer_size": 7167,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -346,7 +350,7 @@
 			"file": "app/reducers/userList.js",
 			"settings":
 			{
-				"buffer_size": 909,
+				"buffer_size": 1015,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -355,7 +359,7 @@
 			"file": "app/reducers/auth.js",
 			"settings":
 			{
-				"buffer_size": 368,
+				"buffer_size": 366,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -364,8 +368,26 @@
 			"file": "app/pages/index.js",
 			"settings":
 			{
-				"buffer_size": 5200,
+				"buffer_size": 5205,
 				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "Searching 469 files for \"localIp\"\n\n/home/binayak/projects/mode/app/actions/index.js:\n   32  })\n   33  \n   34: export const login = (ref, username, uid, localIP) => {\n   35  \n   36:   console.log('action', localIP)\n   37    return {\n   38      type: 'LOGIN',\n   ..\n   40      username, \n   41      uid,\n   42:     localIP\n   43    }\n   44  }\n\n/home/binayak/projects/mode/app/components/ContactList.js:\n   28          let userList = this.props.userList || []\n   29          let userToDisplay = userList.map(user => ({\n   30:                 \"name\": user.name? user.name : user.localIP,\n   31                  \"id\": user.uid,\n   32                  \"unseen\": user.unseen\n\n/home/binayak/projects/mode/app/components/UserInfoDisplay.js:\n   14  \n   15  \trender() {\n   16:     let username = this.props.auth.localIP\n   17  console.log(this.props.auth)\n   18      let presence = (this.props.auth.uid !== undefined)? \"presence-active\" : \"presence-inactive\"\n\n/home/binayak/projects/mode/app/pages/index.js:\n   33  \n   34              await ref.signInWithCustomToken(data.token)\n   35:             this.store.dispatch(login(ref, \"\", data.uid, data.localIP))\n   36:             console.log(\"page\", data['localIP'], data)\n   37          } catch(error) {\n   38              this.store.dispatch(notify(\"failed to authenticate\", \"error\"))\n   ..\n   69                  \n   70          // Join the room\n   71:         userData.localIP = await this.getLocalIP()\n   72          userRef.set(userData, (error) => {\n   73              if (error) {\n   ..\n   98      }\n   99  \n  100:     async getLocalIP() {\n  101          return new Promise((resolve, reject) => {\n  102              window.RTCPeerConnection = window.RTCPeerConnection || window.mozRTCPeerConnection || window.webkitRTCPeerConnection   //compatibility for firefox and chrome\n\n/home/binayak/projects/mode/app/reducers/auth.js:\n    5          ref: action.ref,\n    6          uid: action.uid,\n    7:         localIP: action.localIP\n    8      }\n    9      if (action.username) {\n\n12 matches across 5 files\n",
+			"settings":
+			{
+				"buffer_size": 2046,
+				"line_ending": "Unix",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "api/server.js",
+			"settings":
+			{
+				"buffer_size": 1347,
 				"line_ending": "Unix"
 			}
 		},
@@ -391,7 +413,7 @@
 			"file": "app/actions/index.js",
 			"settings":
 			{
-				"buffer_size": 1015,
+				"buffer_size": 1013,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -418,7 +440,8 @@
 			"file": "app/components/UserName.js",
 			"settings":
 			{
-				"buffer_size": 1305,
+				"buffer_size": 1533,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
@@ -427,6 +450,15 @@
 			"settings":
 			{
 				"buffer_size": 1050,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/components/UserInfoDisplay.js",
+			"settings":
+			{
+				"buffer_size": 811,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -457,8 +489,8 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 244.0,
-		"last_filter": "pretty",
+		"height": 214.0,
+		"last_filter": "",
 		"selected_items":
 		[
 			[
@@ -575,6 +607,8 @@
 	"expanded_folders":
 	[
 		"/home/binayak/projects/mode",
+		"/home/binayak/projects/mode/api",
+		"/home/binayak/projects/mode/api/private",
 		"/home/binayak/projects/mode/app",
 		"/home/binayak/projects/mode/app/actions",
 		"/home/binayak/projects/mode/app/components",
@@ -642,6 +676,13 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"this.props",
+			"localIp",
+			"publicIP",
+			"publicIp",
+			"name",
+			"console",
+			"\n    ",
 			"notify",
 			"localhost",
 			"api",
@@ -681,7 +722,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 14,
 			"sheets":
 			[
 				{
@@ -690,15 +731,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7279,
+						"buffer_size": 7167,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								7092,
-								7107
+								1674,
+								1674
 							]
 						],
 						"settings":
@@ -724,10 +765,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3181.0,
+						"translation.y": 351.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
@@ -766,7 +807,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 13,
+					"stack_index": 18,
 					"type": "text"
 				},
 				{
@@ -802,7 +843,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 15,
 					"type": "text"
 				},
 				{
@@ -833,7 +874,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 14,
 					"type": "text"
 				},
 				{
@@ -842,19 +883,22 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 909,
+						"buffer_size": 1015,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								257,
-								257
+								620,
+								620
 							]
 						],
 						"settings":
 						{
+							"SL.18.region_keys":
+							[
+							],
 							"SL.31.region_keys":
 							[
 							],
@@ -864,7 +908,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
@@ -873,20 +917,23 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 368,
+						"buffer_size": 366,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								368,
-								368
+								260,
+								260
 							]
 						],
 						"settings":
 						{
 							"SL.17.region_keys":
+							[
+							],
+							"SL.19.region_keys":
 							[
 							],
 							"SL.43.region_keys":
@@ -900,7 +947,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 14,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -909,15 +956,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5200,
+						"buffer_size": 5205,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3388,
-								3233
+								1125,
+								1125
 							]
 						],
 						"settings":
@@ -939,14 +986,139 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 765.0,
+						"translation.y": 59.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
 					"buffer": 7,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2046,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										152,
+										159
+									],
+									[
+										205,
+										212
+									],
+									[
+										313,
+										320
+									],
+									[
+										575,
+										582
+									],
+									[
+										801,
+										808
+									],
+									[
+										1137,
+										1144
+									],
+									[
+										1192,
+										1199
+									],
+									[
+										1409,
+										1416
+									],
+									[
+										1433,
+										1440
+									],
+									[
+										1572,
+										1579
+									],
+									[
+										1948,
+										1955
+									],
+									[
+										1964,
+										1971
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								1577,
+								1577
+							]
+						],
+						"settings":
+						{
+							"default_dir": "/home/binayak/projects/mode/app/pages",
+							"detect_indentation": false,
+							"line_numbers": false,
+							"output_tag": 1,
+							"result_base_dir": "",
+							"result_file_regex": "^([^ \t].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "api/server.js",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1347,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								730,
+								738
+							]
+						],
+						"settings":
+						{
+							"SL.47.region_keys":
+							[
+							],
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
 					"file": "app/components/ContactList.js",
 					"semi_transient": false,
 					"settings":
@@ -958,12 +1130,15 @@
 						"selection":
 						[
 							[
-								673,
-								673
+								862,
+								869
 							]
 						],
 						"settings":
 						{
+							"SL.21.region_keys":
+							[
+							],
 							"SL.28.region_keys":
 							[
 							],
@@ -974,11 +1149,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 10,
 					"file": "app/reducers/room.js",
 					"semi_transient": false,
 					"settings":
@@ -1011,24 +1186,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 11,
 					"file": "app/actions/index.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1015,
+						"buffer_size": 1013,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								449,
-								449
+								646,
+								646
 							]
 						],
 						"settings":
@@ -1040,6 +1215,9 @@
 							[
 							],
 							"SL.22.region_keys":
+							[
+							],
+							"SL.23.region_keys":
 							[
 							],
 							"SL.25.region_keys":
@@ -1057,7 +1235,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 12,
 					"file": "app/components/MessageViewer.js",
 					"semi_transient": false,
 					"settings":
@@ -1095,11 +1273,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 13,
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 13,
 					"file": "app/components/Sidebar.js",
 					"semi_transient": false,
 					"settings":
@@ -1129,29 +1307,32 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 16,
 					"type": "text"
 				},
 				{
-					"buffer": 12,
+					"buffer": 14,
 					"file": "app/components/UserName.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1305,
+						"buffer_size": 1533,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1117,
-								1117
+								659,
+								659
 							]
 						],
 						"settings":
 						{
 							"SL.23.region_keys":
+							[
+							],
+							"SL.26.region_keys":
 							[
 							],
 							"SL.55.region_keys":
@@ -1164,11 +1345,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 15,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 13,
+					"buffer": 15,
 					"file": "app/components/InputArea.js",
 					"semi_transient": false,
 					"settings":
@@ -1192,6 +1373,9 @@
 							"SL.24.region_keys":
 							[
 							],
+							"SL.27.region_keys":
+							[
+							],
 							"SL.56.region_keys":
 							[
 							],
@@ -1205,7 +1389,38 @@
 					"type": "text"
 				},
 				{
-					"buffer": 14,
+					"buffer": 16,
+					"file": "app/components/UserInfoDisplay.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 811,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								578,
+								578
+							]
+						],
+						"settings":
+						{
+							"SL.46.region_keys":
+							[
+							],
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 17,
 					"file": "app/static/css/main.css",
 					"semi_transient": false,
 					"settings":
@@ -1237,11 +1452,11 @@
 						"translation.y": 3186.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 12,
+					"stack_index": 17,
 					"type": "text"
 				},
 				{
-					"buffer": 15,
+					"buffer": 18,
 					"file": "app/components/MessageArea.js",
 					"semi_transient": false,
 					"settings":
@@ -1271,6 +1486,9 @@
 							"SL.27.region_keys":
 							[
 							],
+							"SL.29.region_keys":
+							[
+							],
 							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
@@ -1279,7 +1497,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 9,
 					"type": "text"
 				}
 			]
