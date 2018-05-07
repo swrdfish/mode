@@ -106,6 +106,8 @@ i.clear-search {
     display: flex;
     flex-direction: column-reverse;
     padding: 20px;
+    height: 100%;
+    overflow: auto;
 }
 
 .input-area-wrapper {
