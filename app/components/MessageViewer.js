@@ -1,5 +1,40 @@
 import React from 'react'
 
+class MessageBubble extends React.Component {
+    constructor(props) {
+        super(props)
+    }
+
+    render() {
+        let item = this.props.item
+        let className = item.isMine?'message-bubble mine':'message-bubble'
+        let itemRendered
+
+        if(item.type == "file") {
+            className += " file"
+            itemRendered = (
+                <div className='message-bubble-wrapper'>
+                    <div className={className}>
+                        <span>{item.text}</span>
+                        <span className="download-button fa fa-download" onClick={this.props.onDownload} />
+                        <span className='time-stamp'>{item.timeStamp.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })}</span>
+                    </div>
+                </div>
+            )
+        } else {
+            itemRendered = (
+                <div className='message-bubble-wrapper'>
+                    <div className={className}>
+                        <span>{item.text}</span>
+                        <span className='time-stamp'>{item.timeStamp.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })}</span>
+                    </div>
+                </div>
+            )
+        }
+        return itemRendered
+    }
+}
+
 
 class MessageViewer extends React.Component {
     render(){
@@ -7,17 +42,7 @@ class MessageViewer extends React.Component {
             let renderedMsg = (<div className='empty-message-view'>Say something!</div>)
             if (this.props.messages) {
                 let messages = this.props.messages.reduceRight((arr, item) => {
-                    let className = item.isMine?'message-bubble mine':'message-bubble'
-                    let itemRendered = (
-                        <div className='message-bubble-wrapper' key={item.id}>
-                            <div className={className}>
-                                <span>{item.text}</span>
-                                <span className='time-stamp'>{item.timeStamp.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })}</span>
-                            </div>
-                        </div>
-                    )
-
-                    return (arr = arr.concat(itemRendered))
+                    return arr.concat((<MessageBubble item={item} key={item.id} onDownload={this.props.onDownload}/>))
                 }, [])
                 renderedMsg = (
                     <div className='messages-scrollable'>

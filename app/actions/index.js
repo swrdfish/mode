@@ -1,6 +1,7 @@
-export const addMessage = (uid, text, isMine) => ({
+export const addMessage = (uid, msgType, text, isMine) => ({
   type: 'ADD_MSG',
   uid,
+  msgType,
   text,
   isMine
 })

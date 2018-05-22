@@ -120,15 +120,24 @@ i.clear-search {
 }
 
 #attach-button {
-  background: transparent;
-  right: 10px;
-  font-size: 26px;
-  color: #5151514d;
-  cursor: pointer;
-  margin-right: 10px;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
 }
 
-#attach-button:hover {
+.file-input-wrapper {
+    background: transparent;
+    font-size: 26px !important;
+    color: #5151514d;
+    cursor: pointer;
+    margin: 0 10px;
+    position: relative;
+}
+
+.file-input-wrapper:hover {
   color: black;  
 }
 

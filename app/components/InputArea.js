@@ -8,6 +8,7 @@ class InputArea extends React.Component {
 
         this.handleKeyPress = this.handleKeyPress.bind(this)
         this.handleChange = this.handleChange.bind(this)
+        this.handleFileInputChange = this.handleFileInputChange.bind(this)
     }
 
     handleKeyPress(event) {
@@ -22,6 +23,12 @@ class InputArea extends React.Component {
         this.setState({value: event.target.value})
     }
 
+    handleFileInputChange(event) {
+        this.setState({files:event.target.files})
+        this.props.onSendFile(event.target.files)
+        console.log(event.target.files)
+    }
+
 	render() {
 		return (
 			<div className="input-area-wrapper">
@@ -32,8 +39,16 @@ class InputArea extends React.Component {
                     className="input-area-inputfiled"
                     onKeyPress={this.handleKeyPress} 
                     onChange={this.handleChange} />
-
-				<i className="fa fa-paperclip" id="attach-button" aria-hidden="true"></i>
+                <div className="file-input-wrapper fa fa-paperclip">
+				    <input 
+                        className="file-input"
+                        id="attach-button"
+                        aria-hidden="true"
+                        type="file"
+                        name="file-input"
+                        multiple="multiple"
+                        onChange={this.handleFileInputChange} />
+                </div>
 			</div>
 		)
 	}

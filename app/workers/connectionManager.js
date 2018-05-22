@@ -151,7 +151,12 @@ class ConnectionManager {
     _onDataChannel(event) {
         let receiver = event.channel
         receiver.onmessage = (e) => {
-            this.dispatch(addMessage(this.uid, e.data, false))
+            let data = JSON.parse(e.data)
+            if(data.type == "text") {
+                this.dispatch(addMessage(this.uid, "text", data.message, false))
+            } else if( data.type == "file") {
+                this.dispatch(addMessage(this.uid, "file", data.message.count, false))
+            }
         }
     }
 
@@ -170,10 +175,7 @@ class ConnectionManager {
 
         // Create data channel
         let dataChannel = localPeerConnection.createDataChannel('sendDataChannel', dataConstraint)
-
-        // make data Channel available for testing
-        // TODO: remove this
-        window.dataChannel = dataChannel
+        dataChannel.binaryType = 'arraybuffer';
 
         this.connections[uid] = {
             localPeerConnection,
