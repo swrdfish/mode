@@ -11,7 +11,7 @@ const messages = (state = {}, action) => {
             
             newState[action.uid].push({
                 type: action.msgType,
-                text: action.text,
+                body: action.body,
                 timeStamp: new Date(),
                 sent: false,
                 isMine: action.isMine,

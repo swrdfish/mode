@@ -9,14 +9,13 @@ class MessageBubble extends React.Component {
         let item = this.props.item
         let className = item.isMine?'message-bubble mine':'message-bubble'
         let itemRendered
-
         if(item.type == "file") {
             className += " file"
             itemRendered = (
                 <div className='message-bubble-wrapper'>
                     <div className={className}>
-                        <span>{item.text}</span>
-                        <span className="download-button fa fa-download" onClick={this.props.onDownload} />
+                        <span>{item.body.count}</span>
+                        <span className="download-button fa fa-download" data-id={item.body.id} onClick={this.props.onDownload} />
                         <span className='time-stamp'>{item.timeStamp.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })}</span>
                     </div>
                 </div>
@@ -25,7 +24,7 @@ class MessageBubble extends React.Component {
             itemRendered = (
                 <div className='message-bubble-wrapper'>
                     <div className={className}>
-                        <span>{item.text}</span>
+                        <span>{item.body}</span>
                         <span className='time-stamp'>{item.timeStamp.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })}</span>
                     </div>
                 </div>

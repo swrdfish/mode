@@ -1,8 +1,8 @@
-export const addMessage = (uid, msgType, text, isMine) => ({
+export const addMessage = (uid, msgType, body, isMine) => ({
   type: 'ADD_MSG',
   uid,
   msgType,
-  text,
+  body,
   isMine
 })
 
@@ -65,4 +65,10 @@ export const joinRoom = (connectionManager, roomRef) => ({
 export const setUsername = (username) => ({
   type: 'SET_USERNAME',
   username
+})
+
+export const addFiles = (id, files) => ({
+  type: 'ADD_FILE',
+  id,
+  files
 })

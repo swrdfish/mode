@@ -4,6 +4,54 @@
 		"selected_items":
 		[
 			[
+				"file",
+				"filename"
+			],
+			[
+				"save",
+				"saveAs"
+			],
+			[
+				"data",
+				"dataURItoBlob"
+			],
+			[
+				"da",
+				"data"
+			],
+			[
+				"File",
+				"FileHandler"
+			],
+			[
+				"get",
+				"getBase64"
+			],
+			[
+				"re",
+				"reader"
+			],
+			[
+				"res",
+				"resolve"
+			],
+			[
+				"fi",
+				"fileid"
+			],
+			[
+				"conn",
+				"connection"
+			],
+			[
+				"add",
+				"addFiles"
+			],
+			[
+				"item",
+				"item"
+			],
+			[
 				"on",
 				"onDownload"
 			],
@@ -12,24 +60,12 @@
 				"MessageBubble"
 			],
 			[
-				"re",
-				"render"
-			],
-			[
 				"cl",
 				"class"
 			],
 			[
 				"han",
 				"handleFileInputChange"
-			],
-			[
-				"data",
-				"data"
-			],
-			[
-				"da",
-				"data"
 			],
 			[
 				"us",
@@ -60,10 +96,6 @@
 				"value"
 			],
 			[
-				"get",
-				"getConnection"
-			],
-			[
 				"use",
 				"userData"
 			],
@@ -78,10 +110,6 @@
 			[
 				"sta",
 				"state"
-			],
-			[
-				"item",
-				"itemRendered"
 			],
 			[
 				"time",
@@ -110,10 +138,6 @@
 			[
 				"cla",
 				"className"
-			],
-			[
-				"add",
-				"addMessage"
 			],
 			[
 				"crea",
@@ -162,10 +186,6 @@
 			[
 				"ca",
 				"candidate"
-			],
-			[
-				"conn",
-				"connRef"
 			],
 			[
 				"c",
@@ -344,9 +364,17 @@
 	"command_palette":
 	{
 		"height": 392.0,
-		"last_filter": "sspy",
+		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"ssjs",
+				"Set Syntax: JavaScript"
+			],
 			[
 				"sspy",
 				"Set Syntax: Python"
@@ -358,10 +386,6 @@
 			[
 				"pretty",
 				"HTMLPrettify: Set Prettify Preferences"
-			],
-			[
-				"rein",
-				"Indentation: Reindent Lines"
 			],
 			[
 				"ssba",
@@ -398,10 +422,6 @@
 			[
 				"sscoff",
 				"Set Syntax: CoffeeScript"
-			],
-			[
-				"ssjs",
-				"Set Syntax: JavaScript"
 			],
 			[
 				"sspytho",
@@ -466,25 +486,26 @@
 	[
 		"/home/binayak/projects/mode",
 		"/home/binayak/projects/mode/api",
-		"/home/binayak/projects/mode/api/private",
 		"/home/binayak/projects/mode/app",
 		"/home/binayak/projects/mode/app/actions",
-		"/home/binayak/projects/mode/app/components",
 		"/home/binayak/projects/mode/app/pages",
-		"/home/binayak/projects/mode/app/private",
 		"/home/binayak/projects/mode/app/reducers",
-		"/home/binayak/projects/mode/app/static",
-		"/home/binayak/projects/mode/app/static/css",
 		"/home/binayak/projects/mode/app/workers"
 	],
 	"file_history":
 	[
-		"/home/binayak/projects/mode/app/components/InputArea.js",
 		"/home/binayak/projects/mode/app/components/MessageArea.js",
+		"/home/binayak/projects/mode/app/workers/fileHandler.js",
 		"/home/binayak/projects/mode/app/components/MessageViewer.js",
+		"/home/binayak/projects/mode/app/workers/connectionManager.js",
+		"/home/binayak/projects/mode/app/pages/index.js",
+		"/home/binayak/projects/mode/app/reducers/files.js",
+		"/home/binayak/projects/mode/app/reducers/index.js",
+		"/home/binayak/projects/mode/app/reducers/notifications.js",
 		"/home/binayak/projects/mode/app/actions/index.js",
 		"/home/binayak/projects/mode/app/reducers/messages.js",
-		"/home/binayak/projects/mode/app/workers/connectionManager.js",
+		"/home/binayak/projects/mode/app/workers/fileManager.js",
+		"/home/binayak/projects/mode/app/components/InputArea.js",
 		"/home/binayak/projects/CustomFileInputs/CustomFileInputs/index.html",
 		"/home/binayak/projects/mode/app/static/css/main.css",
 		"/home/binayak/projects/mode/app/components/NotificationArea.js",
@@ -493,7 +514,6 @@
 		"/home/binayak/projects/mode/app/components/ContactList.js",
 		"/home/binayak/projects/mode/app/reducers/auth.js",
 		"/home/binayak/projects/mode/app/components/UserInfoDisplay.js",
-		"/home/binayak/projects/mode/app/pages/index.js",
 		"/home/binayak/projects/mode/app/components/UserName.js",
 		"/home/binayak/projects/mode/app/package.json",
 		"/home/binayak/projects/mode/app/components/Sidebar.js",
@@ -505,7 +525,6 @@
 		"/home/binayak/projects/mode/mode.sublime-project",
 		"/home/binayak/projects/webrtc-web/step-03/js/main.js",
 		"/home/binayak/projects/mode/app/components/SearchBar.js",
-		"/home/binayak/projects/mode/app/reducers/index.js",
 		"/home/binayak/projects/WorkChat/public/index.html",
 		"/home/binayak/projects/WorkChat/public/js/client.js",
 		"/home/binayak/projects/WorkChat/public/css/style.css",
@@ -531,7 +550,7 @@
 	],
 	"find":
 	{
-		"height": 29.0
+		"height": 41.0
 	},
 	"find_in_files":
 	{
@@ -546,6 +565,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"messages",
+			"files",
+			"ConnectionManager",
+			"text",
 			"addMessage",
 			"uid",
 			"ondata",
@@ -609,7 +632,7 @@
 	},
 	"input":
 	{
-		"height": 35.0
+		"height": 41.0
 	},
 	"layout":
 	{
@@ -768,7 +791,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 310.0,
+	"side_bar_width": 343.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

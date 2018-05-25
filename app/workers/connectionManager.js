@@ -1,4 +1,5 @@
 import {addMessage} from '../actions'
+import FileHandler from './fileHandler'
 
 
 const servers = { // Allows for RTC server configuration (STUN and TURN).
@@ -24,11 +25,12 @@ const createSessionDescriptoin = (desc) => {
 }
 
 class ConnectionManager {
-    constructor(usersRef, myRef, myUid, dispatch) {
+    constructor(usersRef, myRef, myUid, dispatch, store) {
         this.usersRef = usersRef
         this.myRef = myRef
         this.myUid = myUid
         this.dispatch = dispatch
+        this.store = store
         this.myConnectionRef = myRef.child('connections')
         this.connections = {}
         
@@ -150,14 +152,20 @@ class ConnectionManager {
 
     _onDataChannel(event) {
         let receiver = event.channel
-        receiver.onmessage = (e) => {
+        receiver.onmessage = (function(e) {
             let data = JSON.parse(e.data)
             if(data.type == "text") {
                 this.dispatch(addMessage(this.uid, "text", data.message, false))
             } else if( data.type == "file") {
-                this.dispatch(addMessage(this.uid, "file", data.message.count, false))
+                this.dispatch(addMessage(this.uid, "file", data.message, false))
+            } else if( data.type == "get") {
+                let connection = this.connections[this.uid].dataChannel
+                FileHandler.sendFiles(this.store.getState().files[data.message], connection)
+            } else if( data.type == "put") {
+                console.log(data.filedata, data.filename)
+                FileHandler.saveFile(data.filedata, data.filename)
             }
-        }
+        }).bind(this)
     }
 
     newConnection(uid) {        
@@ -167,7 +175,8 @@ class ConnectionManager {
             connections: this.connections,
             myRef: this.myRef,
             myUid: this.myUid,
-            dispatch: this.dispatch
+            dispatch: this.dispatch,
+            store: this.store
         }
 
         // Create peer connection.
@@ -222,10 +231,5 @@ class ConnectionManager {
         conn.localPeerConnection = null
     }
 }
-
-
-const mapStateToProps = ({dispatch}) => ({
-  dispatch
-})
 
 export default ConnectionManager

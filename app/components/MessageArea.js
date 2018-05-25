@@ -4,7 +4,7 @@ import uuid from 'node-uuid';
 
 import InputArea from './InputArea.js'
 import MessageViewer from './MessageViewer.js'
-import {addMessage} from '../actions'
+import {addMessage, addFiles} from '../actions'
 
 
 class MessageArea extends React.Component {
@@ -32,9 +32,15 @@ class MessageArea extends React.Component {
     onSendFile(files) {
         if(this.props.chatArea.uid && files) {
             let id = uuid.v4()
-            this.files[uuid] = files
+            this.props.dispatch(addFiles(id, files))
+            let filenames = []
+            for( let iii = 0; iii < files.length; iii++ ) {
+                filenames.push(files.item(iii).name)
+            }
             let msg = {
-                count: files.length
+                count : files.length,
+                id,
+                filenames 
             }
             let connection = this.props.room.connectionManager.getConnection(this.props.chatArea.uid)
             if(connection.dataChannel.readyState == "open") {
@@ -48,7 +54,13 @@ class MessageArea extends React.Component {
     }
 
     onDownload(event) {
-        console.log("download the file", event)
+        let fileid = event.target.getAttribute("data-id")
+        let connection = this.props.room.connectionManager.getConnection(this.props.chatArea.uid)
+        connection.dataChannel.send(JSON.stringify({
+            type: "get",
+            message: fileid
+        }))
+        console.log("download the file", fileid)
     }
 
     render() {
