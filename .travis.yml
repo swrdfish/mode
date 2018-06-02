@@ -24,4 +24,6 @@ before_install:
 
   - tar -xzf all_keys.tar.gz
 
-  - echo $(ls all_keys)
+  - gcloud auth activate-service-account --key-file all_keys/peerChat-gcp-service-account-key.json
+
+  - docker build .
