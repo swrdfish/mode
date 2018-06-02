@@ -26,6 +26,8 @@ before_install:
 
   - gcloud auth activate-service-account --key-file all_keys/peerChat-gcp-service-account-key.json
 
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  
 install:
   - cp -r all_keys/api-private api/private
 
@@ -34,7 +36,6 @@ install:
   - docker build -t swrdfish/mode:$(git log -1 --format=%h) . 
 
 script:
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 
   - docker push swrdfish/mode:$(git log -l --format=%h)
 
