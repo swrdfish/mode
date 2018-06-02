@@ -26,7 +26,7 @@ before_install:
 
   - gcloud auth activate-service-account --key-file all_keys/peerChat-gcp-service-account-key.json
 
-  - gcloud config set project `peerChat`
+  - gcloud config set project peerchat-e145d
 
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 
@@ -38,5 +38,6 @@ install:
   - docker build -t swrdfish/mode:latest . 
 
   - docker push swrdfish/mode:latest
+  
 script:
   - gcloud deployment-manager deployments create my-container-deployment --config gcp/container_vm.yaml
