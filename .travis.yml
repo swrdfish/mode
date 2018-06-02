@@ -38,4 +38,5 @@ install:
 script:
   - docker push swrdfish/mode:latest
 
-
+deploy:
+  - gcloud deployment-manager deployments create mode --config gcp/container_vm.yaml
