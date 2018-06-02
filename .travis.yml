@@ -26,4 +26,5 @@ before_install:
 
   - gcloud auth activate-service-account --key-file all_keys/peerChat-gcp-service-account-key.json
 
-  - docker build .
+  - echo $(ls)
+
