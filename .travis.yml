@@ -1,3 +1,27 @@
+sudo: required
+
+services:
+  - docker
+
+language: python
+
+cache:
+  directories:
+    - "$HOME/google-cloud-sdk/"
+
+
+env:
+  # Make sure gcloud command is on our PATH
+  - PATH=$PATH:${HOME}/google-cloud-sdk/bin
+
 before_install:
-- openssl aes-256-cbc -K $encrypted_f842bcbfc33d_key -iv $encrypted_f842bcbfc33d_iv
-  -in all_keys.tar.gz.enc -out all_keys.tar.gz -d
+  - openssl aes-256-cbc -K $encrypted_f842bcbfc33d_key -iv $encrypted_f842bcbfc33d_iv
+    -in all_keys.tar.gz.enc -out all_keys.tar.gz -d
+
+  - if [ ! -d ${HOME}/google-cloud-sdk ]; then
+      curl https://sdk.cloud.google.com | bash;
+    fi
+
+  - tar -xzf all_keys.tar.gz
+
+  - echo $(ls all_keys)
