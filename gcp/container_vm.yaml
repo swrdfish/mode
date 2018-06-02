@@ -21,7 +21,6 @@ resources:
   - name: mode-vm
     type: container_vm.py
     properties:
-      project: peerchat-e145d 
       zone: us-east1-b  
       containerImage: ubuntu-1604-xenial-v20180522
       containerManifest: container_manifest

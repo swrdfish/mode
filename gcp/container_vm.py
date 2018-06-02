@@ -38,7 +38,7 @@ def GenerateConfig(context):
   # Properties for the container-based instance.
   instance = {
       'zone': context.properties['zone'],
-      'machineType': ZonalComputeUrl(context.properties['project'],
+      'machineType': ZonalComputeUrl(context.env['project'],
                                      context.properties['zone'],
                                      'machineTypes',
                                      'n1-standard-1'),
@@ -67,7 +67,7 @@ def GenerateConfig(context):
               'name': 'external-nat',
               'type': 'ONE_TO_ONE_NAT'
               }],
-          'network': GlobalComputeUrl(context.properties['project'],
+          'network': GlobalComputeUrl(context.env['project'],
                                       'networks',
                                       'default')
       }]
