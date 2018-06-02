@@ -44,7 +44,7 @@ class MessageArea extends React.Component {
             }
             let connection = this.props.room.connectionManager.getConnection(this.props.chatArea.uid)
             if(connection.dataChannel.readyState == "open") {
-                this.props.dispatch(addMessage(this.props.chatArea.uid, "file", msg.count, true))
+                this.props.dispatch(addMessage(this.props.chatArea.uid, "file", msg, true))
                 connection.dataChannel.send(JSON.stringify({
                     type: "file",
                     message: msg
