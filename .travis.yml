@@ -1,0 +1,3 @@
+before_install:
+- openssl aes-256-cbc -K $encrypted_f842bcbfc33d_key -iv $encrypted_f842bcbfc33d_iv
+  -in all_keys.tar.gz.enc -out all_keys.tar.gz -d
