@@ -32,8 +32,7 @@ def GenerateConfig(context):
   """Generate configuration."""
 
   res = []
-  base_name = (context.env['deployment'] + '-' +
-               context.env['name'])
+  base_name = context.env['name']
 
   # Properties for the container-based instance.
   instance = {
@@ -41,10 +40,10 @@ def GenerateConfig(context):
       'machineType': ZonalComputeUrl(context.env['project'],
                                      context.properties['zone'],
                                      'machineTypes',
-                                     'n1-standard-1'),
+                                     'f1-micro'),
       'metadata': {
           'items': [{
-              'key': 'google-container-manifest',
+              'key': 'gce-container-declaration',
               'value': context.imports[
                   context.properties['containerManifest']],
               }]
