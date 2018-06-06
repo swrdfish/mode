@@ -40,6 +40,7 @@ install:
   - docker push swrdfish/mode:latest
   
 script:
+  # Delete current deployment
   - gcloud deployment-manager deployments delete my-container-deployment -q
 
   - gcloud deployment-manager deployments create my-container-deployment --config gcp/container_vm.yaml
