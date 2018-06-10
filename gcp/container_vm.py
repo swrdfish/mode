@@ -32,7 +32,8 @@ def GenerateConfig(context):
   """Generate configuration."""
 
   res = []
-  base_name = context.env['name']
+  base_name = (context.env['deployment'] + '-' +
+               context.env['name'])
 
   # Properties for the container-based instance.
   instance = {
@@ -40,10 +41,10 @@ def GenerateConfig(context):
       'machineType': ZonalComputeUrl(context.env['project'],
                                      context.properties['zone'],
                                      'machineTypes',
-                                     'f1-micro'),
+                                     'n1-standard-1'),
       'metadata': {
           'items': [{
-              'key': 'gce-container-declaration',
+              'key': 'google-container-manifest',
               'value': context.imports[
                   context.properties['containerManifest']],
               }]
@@ -55,7 +56,7 @@ def GenerateConfig(context):
           'boot': True,
           'initializeParams': {
               'diskName': base_name + '-disk',
-              'sourceImage': GlobalComputeUrl('ubuntu-os-cloud',
+              'sourceImage': GlobalComputeUrl('cos-cloud',
                                               'images',
                                               context.properties[
                                                   'containerImage'])

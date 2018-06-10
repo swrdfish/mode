@@ -372,7 +372,7 @@
 			"file": "gcp/container_vm.yaml",
 			"settings":
 			{
-				"buffer_size": 881,
+				"buffer_size": 873,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -381,7 +381,7 @@
 			"file": "/home/binayak/projects/jmagick/config.log",
 			"settings":
 			{
-				"buffer_size": 28013,
+				"buffer_size": 27889,
 				"line_ending": "Unix"
 			}
 		},
@@ -398,7 +398,7 @@
 			"file": "gcp/container_vm.py",
 			"settings":
 			{
-				"buffer_size": 2757,
+				"buffer_size": 2814,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -407,7 +407,7 @@
 			"file": ".travis.yml",
 			"settings":
 			{
-				"buffer_size": 1093,
+				"buffer_size": 1123,
 				"encoding": "UTF-8",
 				"line_ending": "Unix",
 				"name": ".travis.yml"
@@ -427,7 +427,7 @@
 			"file": "gcp/container_manifest.yaml",
 			"settings":
 			{
-				"buffer_size": 144,
+				"buffer_size": 306,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -573,6 +573,8 @@
 	},
 	"expanded_folders":
 	[
+		"/home/binayak/projects/mode",
+		"/home/binayak/projects/mode/gcp"
 	],
 	"file_history":
 	[
@@ -642,7 +644,7 @@
 	],
 	"find":
 	{
-		"height": 28.0
+		"height": 43.0
 	},
 	"find_in_files":
 	{
@@ -736,7 +738,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -767,7 +769,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
@@ -776,15 +778,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 881,
+						"buffer_size": 873,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								881,
-								881
+								828,
+								828
 							]
 						],
 						"settings":
@@ -792,10 +794,10 @@
 							"syntax": "Packages/YAML/YAML.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 132.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -804,15 +806,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 28013,
+						"buffer_size": 27889,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3543,
-								3548
+								0,
+								0
 							]
 						],
 						"settings":
@@ -825,7 +827,7 @@
 						"translation.y": 1182.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -858,7 +860,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -867,15 +869,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2757,
+						"buffer_size": 2814,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								712,
-								712
+								2814,
+								2814
 							]
 						],
 						"settings":
@@ -885,10 +887,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 285.0,
+						"translation.y": 132.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -897,15 +899,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1093,
+						"buffer_size": 1123,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								988,
-								988
+								1123,
+								1123
 							]
 						],
 						"settings":
@@ -919,7 +921,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 396.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 4,
@@ -1043,15 +1045,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 144,
+						"buffer_size": 306,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5,
-								5
+								47,
+								47
 							]
 						],
 						"settings":
@@ -1065,7 +1067,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -1098,7 +1100,7 @@
 						"translation.y": 114.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 6,
 					"type": "text"
 				}
 			]
@@ -1106,7 +1108,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 28.0
+		"height": 31.0
 	},
 	"input":
 	{
@@ -1151,7 +1153,7 @@
 	"project": "mode.sublime-project",
 	"replace":
 	{
-		"height": 52.0
+		"height": 58.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1273,7 +1275,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 164.0,
+	"side_bar_width": 246.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

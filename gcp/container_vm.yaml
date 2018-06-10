@@ -18,9 +18,9 @@ imports:
 - path: container_vm.py
 
 resources:
-  - name: mode-vm
+  - name: my-container-vm
     type: container_vm.py
     properties:
-      zone: us-east1-b  
-      containerImage: ubuntu-1604-xenial-v20180522
+      zone: us-east1-b
+      containerImage: cos-stable-66-10452-101-0
       containerManifest: container_manifest
