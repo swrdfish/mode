@@ -18,9 +18,9 @@ imports:
 - path: container_vm.py
 
 resources:
-  - name: my-container-vm
+  - name: mode
     type: container_vm.py
     properties:
       zone: us-east1-b
-      containerImage: cos-stable-66-10452-101-0
+      containerImage: family/cos-stable
       containerManifest: container_manifest

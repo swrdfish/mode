@@ -367,78 +367,6 @@
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
-		},
-		{
-			"file": "gcp/container_vm.yaml",
-			"settings":
-			{
-				"buffer_size": 873,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/binayak/projects/jmagick/config.log",
-			"settings":
-			{
-				"buffer_size": 27889,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "gcp/container_vm.py.schema",
-			"settings":
-			{
-				"buffer_size": 476,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "gcp/container_vm.py",
-			"settings":
-			{
-				"buffer_size": 2814,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": ".travis.yml",
-			"settings":
-			{
-				"buffer_size": 1123,
-				"encoding": "UTF-8",
-				"line_ending": "Unix",
-				"name": ".travis.yml"
-			}
-		},
-		{
-			"contents": "Searching 89 files for \"project\"\n\n/home/binayak/projects/mode/api/private/peerchat-e145d-firebase-adminsdk-b2upf-d0e552f7f4.json:\n    1  {\n    2    \"type\": \"service_account\",\n    3:   \"project_id\": \"peerchat-e145d\",\n    4    \"private_key_id\": \"d0e552f7f45f5f367eb08b54b3eb76d9b15fd204\",\n    5    \"private_key\": \"-----BEGIN PRIVATE KEY-----\\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDdCYNcAJTHg2GR\\nNPXLvK20WwZ2pOGNK5ak8ZZisRp4cjP+MMlNpzXRznN4J7YHSJMd862KsIjLacU5\\naJfX7iCNGbZyOXxMhlp8RRRjJZHaEV0KgWbSsCuWSvdxTrgyTU9zC3VShJfrhho6\\nngDQQ7AmQVzUT4X7JGwvY/KCdF9gkfAb7MNJWoxnKfYQaE33y1Mb1eBErh4FdEpT\\nhucfuZrZD1Bvsb50FmDdnRf9weT4RYtAQdsFoXl1dhFi7YkrUIldLsYFITNm/zFN\\nWs6luABOH0oMp6J5v/rXksgqQo15W3gh/IV4FacCwPfGwkwfEDKdRq6LIlRf4HjG\\nRAuuVq5nAgMBAAECggEACW09b/AKaFPfFl1G2lCKq/Vx2h+ACxA/1XsEKeNZuKdO\\nNloIS8qEzhTa8dXnunnK5G0fCpoqy1oQcjlWuHvMYZgmIsr21SCpvUEI9I2GoeE5\\nsZgBNZ0Tzs4VrXxo+KQ5bjOf5kwHWqEWf0d7y2YHnioNdnSJx0MvZfoCPrQN2UVr\\nyIVtWNLW4j6P18zaUlupPgnA0xpjYqVgIwwJPTawZzxYCbanUKwnPJz+GmSRRUWL\\npdGlQSlgapXPTAES3Zqja3WkVM+YqitlMrAvO2649yYgSOJbyq5ZEfGio0F3sS81\\nMATwuZ2ZEeNlpuaMq5Ep6/Io9lyYkBFT3pq4LCzkmQKBgQDwaXWMN4btwy8Y3ILs\\nskWvHygI53HtGfUzj6Z1IgM+g9MAKrxWsrEkb23RIUxvkvJwDDwf55T3g7A6dAtT\\nW089sTY20XmEgMtb5Eu56tzIpryS/J4RGWsL42feIQID8Lda8x8+2k/6PGjFwfKf\\niDmicIFMRpTcyVUV0fdjV0f/CwKBgQDrXnTYhgo8Q082YVqD38PG0dB5xSw1loVW\\nSpfJWNpkN33G4DxLg+TsferiKoaGicuOquHR8QTxsLjAsXujkcSRXUmjOA7dLLkR\\nB3pvKppVbt1oqKmb5+AVq6dVqrgpTWPftDX132oFHd0jPsVFoQUjiVz6K9z53OWz\\nvqoCqNfXlQKBgQDZK1qtBAfVxahIvAFk0ZFTJUDj8jaeqQEvx4blbokhsrErCG/D\\nnX2ZXTMFZCAI9eQcxWCWrXqKsCHEW8lTTjthjjBcCpPL1xBcfPjPBFLWyo+z85DR\\n/3UMcysDpCuO5aar+Mzz2P/AG0vFwHJsHAF8NEcIYQXd/9zlbhscWN7HiwKBgQCb\\nUR6MD4/LiqNIAGBJq6y2k5gd8vYkeqqMcfbN4HtlLJUsWqaPMn8rbEBGdMeHGoEg\\nKTWRY5nen76bMcOkAboULto8Ae8VFsEdMrEhkJx9igZDXSFnh1EBG9/1kQ2r+6zP\\nX01IbeC5daaK7o4hT4tjku6vC6jrnVBbF5N6485jLQKBgDOBqn3WsyYiZNhwNyG1\\nOTv+viOfMnuJ51o9/cAfkEBXbb/1WmI6Y3QrnHbf9Layuopv/b7GtoCbN6NKP64a\\nczyeBMrvSmq6DO3OLwT1FyKlf6jj/Frrg/fQUCeOWHtd32+Hu1yweGu2c/dS8StB\\n4wRbRBcNHEuJD4M5iEXHudeH\\n-----END PRIVATE KEY-----\\n\",\n\n/home/binayak/projects/mode/app/private/clientSecret.json:\n    3  \t\"authDomain\": \"peerchat-e145d.firebaseapp.com\",\n    4  \t\"databaseURL\": \"https://peerchat-e145d.firebaseio.com\",\n    5: \t\"projectId\": \"peerchat-e145d\",\n    6  \t\"storageBucket\": \"peerchat-e145d.appspot.com\",\n    7  \t\"messagingSenderId\": \"627788128042\"\n\n/home/binayak/projects/mode/app/static/fonts/font-awesome-4.7.0/HELP-US-OUT.txt:\n    1: I hope you love Font Awesome. If you've found it useful, please do me a favor and check out my latest project,\n    2  Fort Awesome (https://fortawesome.com). It makes it easy to put the perfect icons on your website. Choose from our awesome,\n    3  comprehensive icon sets or copy and paste your own.\n\n/home/binayak/projects/mode/app/static/fonts/font-awesome-4.7.0/scss/_mixins.scss:\n   29  // Only display content to screen readers. A la Bootstrap 4.\n   30  //\n   31: // See: http://a11yproject.com/posts/how-to-hide-content/\n   32  \n   33  @mixin sr-only {\n\n/home/binayak/projects/mode/app/static/fonts/octicons-6.0.1/CHANGELOG.md:\n   22  Fixes:\n   23  \n   24: - projects icon renders as a block, using `fill-rule` fixes it\n   25  \n   26  ### 5.0.0\n   ..\n   28  Adds:\n   29  \n   30: - `project`\n   31  - `note`\n   32  - `screen-full`\n\n/home/binayak/projects/mode/app/static/fonts/octicons-6.0.1/README.md:\n  163  \n  164  1. Open the Octicons directory in Terminal\n  165: 2. `npm install` to install all dependencies for the project.\n  166  3. Run the command `npm run build`. This will run the grunt task to build the SVGs, placing them in the `build/` directory.\n  167  \n\n/home/binayak/projects/mode/app/static/fonts/octicons-6.0.1/lib/data.json:\n  844      ]\n  845    },\n  846:   \"project\": {\n  847      \"keywords\": [\n  848        \"board\",\n\n/home/binayak/projects/mode/gcp/container_vm.py:\n   19  \n   20  \n   21: def GlobalComputeUrl(project, collection, name):\n   22:   return ''.join([COMPUTE_URL_BASE, 'projects/', project,\n   23                    '/global/', collection, '/', name])\n   24  \n   25  \n   26: def ZonalComputeUrl(project, zone, collection, name):\n   27:   return ''.join([COMPUTE_URL_BASE, 'projects/', project,\n   28                    '/zones/', zone, '/', collection, '/', name])\n   29  \n   ..\n   39    instance = {\n   40        'zone': context.properties['zone'],\n   41:       'machineType': ZonalComputeUrl(context.env['project'],\n   42                                       context.properties['zone'],\n   43                                       'machineTypes',\n   ..\n   68                'type': 'ONE_TO_ONE_NAT'\n   69                }],\n   70:           'network': GlobalComputeUrl(context.env['project'],\n   71                                        'networks',\n   72                                        'default')\n\n/home/binayak/projects/mode/gcp/container_vm.yaml:\n   22      type: container_vm.py\n   23      properties:\n   24:       project: peerchat-e145d \n   25        zone: us-east1-b  \n   26        containerImage: ubuntu-1604-xenial-v20180522\n\n17 matches across 9 files\n",
-			"settings":
-			{
-				"buffer_size": 5067,
-				"line_ending": "Unix",
-				"name": "Find Results",
-				"scratch": true
-			}
-		},
-		{
-			"file": "gcp/container_manifest.yaml",
-			"settings":
-			{
-				"buffer_size": 306,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "working.txt",
-			"settings":
-			{
-				"buffer_size": 1891,
-				"line_ending": "Unix"
-			}
 		}
 	],
 	"build_system": "",
@@ -578,8 +506,16 @@
 	],
 	"file_history":
 	[
-		"/home/binayak/projects/mode/working1.txt",
+		"/home/binayak/projects/mode/gcp/container_vm.py.schema",
+		"/home/binayak/projects/mode/gcp/container_vm.py",
+		"/home/binayak/projects/mode/.travis.yml",
+		"/home/binayak/projects/mode/gcp/container_manifest.yaml",
 		"/home/binayak/projects/mode/gcp/container_vm.yaml",
+		"/usr/local/include/ImageMagick-7/MagickCore/MagickCore.h",
+		"/home/binayak/projects/jmagick/config.log",
+		"/home/binayak/projects/JNAerator/jnaerator-runtime/src/main/java/com/ochafik/lang/jnaerator/runtime/NativeSize.java",
+		"/home/binayak/projects/mode/working.txt",
+		"/home/binayak/projects/mode/working1.txt",
 		"/home/binayak/projects/mode/container_vm.py",
 		"/home/binayak/projects/mode/container_manifest.yaml",
 		"/home/binayak/projects/mode/container_vm.yaml",
@@ -663,6 +599,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"magickcore",
+			"info",
 			"error",
 			"MagickCore",
 			"goog",
@@ -738,7 +676,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -769,338 +707,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "gcp/container_vm.yaml",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 873,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								828,
-								828
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/YAML/YAML.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 132.0,
-						"zoom_level": 1.0
-					},
 					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/home/binayak/projects/jmagick/config.log",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 27889,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1182.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "gcp/container_vm.py.schema",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 476,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								476,
-								476
-							]
-						],
-						"settings":
-						{
-							"SL.29.region_keys":
-							[
-							],
-							"syntax": "Packages/YAML/YAML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "gcp/container_vm.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2814,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2814,
-								2814
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 132.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": ".travis.yml",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1123,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1123,
-								1123
-							]
-						],
-						"settings":
-						{
-							"SL.17.region_keys":
-							[
-							],
-							"auto_name": ".travis.yml",
-							"syntax": "Packages/YAML/YAML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 396.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5067,
-						"regions":
-						{
-							"match":
-							{
-								"flags": 112,
-								"regions":
-								[
-									[
-										185,
-										192
-									],
-									[
-										2236,
-										2243
-									],
-									[
-										2556,
-										2563
-									],
-									[
-										2943,
-										2950
-									],
-									[
-										3120,
-										3127
-									],
-									[
-										3243,
-										3250
-									],
-									[
-										3481,
-										3488
-									],
-									[
-										3740,
-										3747
-									],
-									[
-										3893,
-										3900
-									],
-									[
-										3965,
-										3972
-									],
-									[
-										3977,
-										3984
-									],
-									[
-										4090,
-										4097
-									],
-									[
-										4168,
-										4175
-									],
-									[
-										4180,
-										4187
-									],
-									[
-										4402,
-										4409
-									],
-									[
-										4680,
-										4687
-									],
-									[
-										4925,
-										4932
-									]
-								],
-								"scope": ""
-							}
-						},
-						"selection":
-						[
-							[
-								4185,
-								4185
-							]
-						],
-						"settings":
-						{
-							"default_dir": "/home/binayak/projects/mode/gcp",
-							"detect_indentation": false,
-							"line_numbers": false,
-							"output_tag": 1,
-							"result_base_dir": "",
-							"result_file_regex": "^([^ \t].*):$",
-							"result_line_regex": "^ +([0-9]+):",
-							"scroll_past_end": true,
-							"syntax": "Packages/Default/Find Results.hidden-tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 551.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "gcp/container_manifest.yaml",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 306,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								47,
-								47
-							]
-						],
-						"settings":
-						{
-							"SL.33.region_keys":
-							[
-							],
-							"syntax": "Packages/YAML/YAML.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "working.txt",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1891,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1000,
-								1000
-							]
-						],
-						"settings":
-						{
-							"SL.36.region_keys":
-							[
-							],
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 114.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
 					"type": "text"
 				}
 			]

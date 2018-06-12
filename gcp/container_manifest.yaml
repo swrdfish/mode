@@ -5,9 +5,8 @@ metadata:
 spec:
   containers:
     - name: mode
-      image: gcr.io/google-containers/busybox
-      command: ['nc', '-p', '8080', '-l', '-l', '-e', 'echo', 'hello world!']
+      image: docker.io/swrdfish/mode:latest
       imagePullPolicy: Always
       ports:
-        - containerPort: 8080
-          hostPort: 8080
+        - containerPort: 80
+          hostPort: 80

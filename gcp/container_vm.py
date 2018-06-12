@@ -32,8 +32,7 @@ def GenerateConfig(context):
   """Generate configuration."""
 
   res = []
-  base_name = (context.env['deployment'] + '-' +
-               context.env['name'])
+  base_name = context.env['name']
 
   # Properties for the container-based instance.
   instance = {
@@ -41,10 +40,10 @@ def GenerateConfig(context):
       'machineType': ZonalComputeUrl(context.env['project'],
                                      context.properties['zone'],
                                      'machineTypes',
-                                     'n1-standard-1'),
+                                     'f1-micro'),
       'metadata': {
           'items': [{
-              'key': 'google-container-manifest',
+              'key': 'gce-container-declaration',
               'value': context.imports[
                   context.properties['containerManifest']],
               }]
@@ -64,12 +63,17 @@ def GenerateConfig(context):
       }],
       'networkInterfaces': [{
           'accessConfigs': [{
-              'name': 'external-nat',
-              'type': 'ONE_TO_ONE_NAT'
+              'name' : 'external-nat',
+              'natIP': '35.227.58.168',
+              'type' : 'ONE_TO_ONE_NAT'
               }],
           'network': GlobalComputeUrl(context.env['project'],
                                       'networks',
                                       'default')
+      }],
+      'serviceAccounts': [{
+          'email': 'default',
+          'scopes': ['https://www.googleapis.com/auth/logging.write']
       }]
   }
   res.append({
