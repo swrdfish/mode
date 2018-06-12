@@ -45,4 +45,4 @@ script:
 
   - gcloud deployment-manager deployments create my-container-deployment --config gcp/container_vm.yaml
 
-  - gcloud compute instances add-tags mode-vm --tags http-server
+  - gcloud compute instances add-tags mode --zone us-east1-b --tags http-server
