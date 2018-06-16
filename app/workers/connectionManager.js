@@ -62,7 +62,8 @@ class ConnectionManager {
                 connections: this.connections,
                 myRef: this.myRef,
                 myUid: this.myUid,
-                dispatch: this.dispatch
+                dispatch: this.dispatch,
+                store: this.store
             }
 
             if(!this.connections[conn.sender]) {

@@ -15,7 +15,7 @@ WORKDIR /mode
 ADD . /mode
 
 # install dependencies
-RUN cd app/ && npm install
+RUN cd app/ && npm install && npm run build
 RUN cd api/ && npm install
 
 # Start 
