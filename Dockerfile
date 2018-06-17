@@ -8,7 +8,7 @@ RUN cd ~ && curl -sL https://deb.nodesource.com/setup_8.x -o nodesource_setup.sh
 
 # copy nginx config
 COPY nginx_conf/sites-available/default /etc/nginx/sites-available/default
-
+COPY nginx_conf/nginx.conf /etc/nginx/
 
 WORKDIR /mode
 
