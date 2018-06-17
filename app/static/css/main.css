@@ -67,6 +67,15 @@ input.user-name {
     padding-left: 9px;
 }
 
+.user-name-edit {
+    color: #dbd4d4;
+}
+
+.user-name-edit:hover {
+    color: grey;
+    cursor: pointer;
+}
+
 .search-wrapper {
     padding: 10px;
     background: transparent;

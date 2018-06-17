@@ -26,8 +26,8 @@ class UserInfoDisplay extends React.Component {
 		return (
 			<div className="user-info-wrapper">
 				<UserProfilePicture />
-				<UserName value={username} onUpdateUsername={this.onUpdateUsername}/>
-                <span className={presence} />
+                <span className={presence} /> &nbsp;
+                <UserName value={username} onUpdateUsername={this.onUpdateUsername}/>
 			</div>
 		)
 	}

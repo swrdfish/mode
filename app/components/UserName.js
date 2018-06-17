@@ -49,7 +49,8 @@ class UserName extends React.Component {
 		if(this.state.editMode == 'OFF'){
 			return (
 				<span className="user-name" onClick={this.handleSpanOnClick}>
-				{this.state.value}
+				{this.state.value} 
+				&nbsp;&nbsp;&nbsp;&nbsp;<span className="user-name-edit fa  fa-pencil" />
 				</span>
 			)	
 		}
