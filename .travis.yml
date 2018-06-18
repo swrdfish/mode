@@ -42,6 +42,7 @@ install:
   # Install npm dependencies for running tests
   - cd app/ && rm -rf node_modules/ && npm install
   
+  - ls -ltrh
 script:
   # Run tests
   - npm run test && cd ..
