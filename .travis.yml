@@ -38,11 +38,14 @@ install:
   - docker build -t swrdfish/mode:latest . 
 
   - docker push swrdfish/mode:latest
+
+  # Install npm dependencies for running tests
+  - cd app/ && npm run install
   
 script:
   # Run tests
   - cd app/ && npm run test
-  
+
   # Delete current deployment
   - gcloud deployment-manager deployments delete my-container-deployment -q
 
