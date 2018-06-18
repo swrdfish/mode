@@ -40,7 +40,7 @@ install:
   - docker push swrdfish/mode:latest
 
   # Install npm dependencies for running tests
-  - cd app/ && npm install
+  - cd app/ && rm -rf node_modules/ && npm install
   
 script:
   # Run tests
