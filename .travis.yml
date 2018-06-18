@@ -44,7 +44,7 @@ install:
   
 script:
   # Run tests
-  - cd app/ && npm run test
+  - npm run test && cd ..
 
   # Delete current deployment
   - gcloud deployment-manager deployments delete my-container-deployment -q
