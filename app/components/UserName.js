@@ -14,17 +14,24 @@ class UserName extends React.Component {
 		this.handleKeyPress = this.handleKeyPress.bind(this)
 	}
 
-	static getDerivedStateFromProps(nextProps) {
-		return {
-			value: nextProps.value?nextProps.value:'connecting..'
+	// static getDerivedStateFromProps(nextProps) {
+	// 	console.log("getDerivedStateFromProps:", nextProps)
+	// 	return {
+	// 		value: nextProps.value?nextProps.value:'connecting..'
+	// 	}
+	// }
+
+	handleSpanOnClick() {
+		if (this.props.value) {
+			this.setState({
+				editMode: 'ON',
+				value: this.props.value
+			})
 		}
 	}
 
-	handleSpanOnClick() {
-		this.setState({editMode: 'ON'})
-	}
-
 	handleChange(event) {
+		console.log("handleChange:", event.target.value)
 		this.setState({value: event.target.value});
 	}
 
@@ -49,7 +56,7 @@ class UserName extends React.Component {
 		if(this.state.editMode == 'OFF'){
 			return (
 				<span className="user-name" onClick={this.handleSpanOnClick}>
-				{this.state.value} 
+				{this.props.value?this.props.value:"connecting.."} 
 				&nbsp;&nbsp;&nbsp;&nbsp;<span className="user-name-edit fa  fa-pencil" />
 				</span>
 			)	

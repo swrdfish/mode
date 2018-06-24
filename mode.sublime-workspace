@@ -4,6 +4,30 @@
 		"selected_items":
 		[
 			[
+				"p",
+				"printf\tprintf …"
+			],
+			[
+				"add",
+				"addFiles"
+			],
+			[
+				"user",
+				"username"
+			],
+			[
+				"a",
+				"Actions"
+			],
+			[
+				"ad",
+				"addMessage"
+			],
+			[
+				"de",
+				"deleteMessage"
+			],
+			[
 				"pro",
 				"properties"
 			],
@@ -56,10 +80,6 @@
 				"connection"
 			],
 			[
-				"add",
-				"addFiles"
-			],
-			[
 				"item",
 				"item"
 			],
@@ -86,14 +106,6 @@
 			[
 				"u",
 				"user"
-			],
-			[
-				"user",
-				"username"
-			],
-			[
-				"a",
-				"action"
 			],
 			[
 				"con",
@@ -360,11 +372,134 @@
 	"buffers":
 	[
 		{
+			"file": "app/__tests__/actions/actions.jest.js",
+			"settings":
+			{
+				"buffer_size": 3069,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": ".dockerignore",
+			"settings":
+			{
+				"buffer_size": 49,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": ".travis.yml",
+			"settings":
+			{
+				"buffer_size": 1357,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/binayak/projects/myclib/main.c",
+			"settings":
+			{
+				"buffer_size": 6554,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/binayak/projects/myclib/test.c",
+			"settings":
+			{
+				"buffer_size": 479,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/binayak/projects/myclib/test.h",
+			"settings":
+			{
+				"buffer_size": 113,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/binayak/projects/samagick/pom.xml",
+			"settings":
+			{
+				"buffer_size": 754,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "Method threw 'java.lang.IllegalStateException' exception. Cannot evaluate com.swrdfish.tools.dumbledore.types.magickcore.SaMagickCore$ImageInfo$ByReference.toString()",
+			"settings":
+			{
+				"buffer_size": 166,
+				"line_ending": "Unix",
+				"name": "Method threw 'java.lang.IllegalStateException' exc"
+			}
+		},
+		{
+			"file": "app/package.json",
+			"settings":
+			{
+				"buffer_size": 982,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/components/UserName.js",
+			"settings":
+			{
+				"buffer_size": 1598,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/components/UserInfoDisplay.js",
+			"settings":
+			{
+				"buffer_size": 1265,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/.babelrc",
+			"settings":
+			{
+				"buffer_size": 237,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "Dockerfile",
 			"settings":
 			{
-				"buffer_size": 508,
+				"buffer_size": 563,
 				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/jest.config.js",
+			"settings":
+			{
+				"buffer_size": 306,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/jest.setup.js",
+			"settings":
+			{
+				"buffer_size": 120,
 				"line_ending": "Unix"
 			}
 		}
@@ -381,6 +516,10 @@
 		"selected_items":
 		[
 			[
+				"sspy",
+				"Set Syntax: Python"
+			],
+			[
 				"ssyam",
 				"Set Syntax: YAML"
 			],
@@ -395,10 +534,6 @@
 			[
 				"ssjs",
 				"Set Syntax: JavaScript"
-			],
-			[
-				"sspy",
-				"Set Syntax: Python"
 			],
 			[
 				"re",
@@ -502,15 +637,38 @@
 	"expanded_folders":
 	[
 		"/home/binayak/projects/mode",
-		"/home/binayak/projects/mode/gcp"
+		"/home/binayak/projects/mode/app",
+		"/home/binayak/projects/mode/app/components"
 	],
 	"file_history":
 	[
-		"/home/binayak/projects/mode/gcp/container_vm.py.schema",
-		"/home/binayak/projects/mode/gcp/container_vm.py",
-		"/home/binayak/projects/mode/.travis.yml",
-		"/home/binayak/projects/mode/gcp/container_manifest.yaml",
+		"/home/binayak/projects/samagick/pom.xml",
+		"/home/binayak/projects/main.c",
+		"/home/binayak/projects/test.c",
+		"/home/binayak/projects/test.h",
+		"/home/binayak/projects/mode/.gitignore",
+		"/home/binayak/projects/mode/app/yarn-error.log",
+		"/home/binayak/projects/mode/app/package-lock.json",
+		"/home/binayak/projects/mode/app/actions/index.js",
+		"/home/binayak/projects/mode/app/workers/fileHandler.js",
+		"/home/binayak/projects/mode/app/workers/connectionManager.js",
+		"/home/binayak/projects/mode/Dockerfile",
+		"/home/binayak/projects/mode/entry.sh",
+		"/home/binayak/projects/mode/app/components/UserInfoDisplay.js",
+		"/home/binayak/projects/mode/app/static/css/main.css",
+		"/home/binayak/projects/mode/app/static/fonts/octicons-6.0.1/yarn.lock",
+		"/home/binayak/projects/mode/app/components/UserName.js",
+		"/home/binayak/projects/mode/nginx_conf/nginx.conf",
+		"/home/binayak/projects/mode/app/__tests__/.babelrc",
+		"/home/binayak/projects/mode/app/package.json",
+		"/home/binayak/projects/mode/app/__tests__/actions.jest.js",
+		"/home/binayak/projects/mode/app/next.config.js",
+		"/home/binayak/projects/samagick/hs_err_pid3830.log",
 		"/home/binayak/projects/mode/gcp/container_vm.yaml",
+		"/home/binayak/projects/mode/gcp/container_vm.py",
+		"/home/binayak/projects/mode/gcp/container_manifest.yaml",
+		"/home/binayak/projects/mode/.travis.yml",
+		"/home/binayak/projects/mode/gcp/container_vm.py.schema",
 		"/usr/local/include/ImageMagick-7/MagickCore/MagickCore.h",
 		"/home/binayak/projects/jmagick/config.log",
 		"/home/binayak/projects/JNAerator/jnaerator-runtime/src/main/java/com/ochafik/lang/jnaerator/runtime/NativeSize.java",
@@ -519,22 +677,15 @@
 		"/home/binayak/projects/mode/container_vm.py",
 		"/home/binayak/projects/mode/container_manifest.yaml",
 		"/home/binayak/projects/mode/container_vm.yaml",
-		"/home/binayak/projects/mode/app/package.json",
 		"/home/binayak/projects/mode/container_vm.py.schema",
 		"/home/binayak/projects/mode/nginx_conf/sites-available/default",
-		"/home/binayak/projects/mode/Dockerfile",
 		"/home/binayak/projects/mode/app/components/MessageArea.js",
 		"/home/binayak/projects/mode/app/components/MessageViewer.js",
 		"/home/binayak/projects/mode/.dockerignore",
-		"/home/binayak/projects/mode/entry.sh",
-		"/home/binayak/projects/mode/app/static/css/main.css",
-		"/home/binayak/projects/mode/app/workers/fileHandler.js",
-		"/home/binayak/projects/mode/app/workers/connectionManager.js",
 		"/home/binayak/projects/mode/app/pages/index.js",
 		"/home/binayak/projects/mode/app/reducers/files.js",
 		"/home/binayak/projects/mode/app/reducers/index.js",
 		"/home/binayak/projects/mode/app/reducers/notifications.js",
-		"/home/binayak/projects/mode/app/actions/index.js",
 		"/home/binayak/projects/mode/app/reducers/messages.js",
 		"/home/binayak/projects/mode/app/workers/fileManager.js",
 		"/home/binayak/projects/mode/app/components/InputArea.js",
@@ -544,8 +695,6 @@
 		"/home/binayak/projects/mode/app/reducers/userList.js",
 		"/home/binayak/projects/mode/app/components/ContactList.js",
 		"/home/binayak/projects/mode/app/reducers/auth.js",
-		"/home/binayak/projects/mode/app/components/UserInfoDisplay.js",
-		"/home/binayak/projects/mode/app/components/UserName.js",
 		"/home/binayak/projects/mode/app/components/Sidebar.js",
 		"/home/binayak/projects/mode/app/reducers/room.js",
 		"/home/binayak/.config/sublime-text-3/Packages/HTML-CSS-JS Prettify/.jsbeautifyrc.defaults.json",
@@ -580,7 +729,7 @@
 	],
 	"find":
 	{
-		"height": 43.0
+		"height": 65.0
 	},
 	"find_in_files":
 	{
@@ -599,6 +748,22 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			">\n",
+			"info",
+			"serUsername",
+			"joinRoom",
+			"unnotify",
+			"notify",
+			"chat",
+			"addUser",
+			"Actions.",
+			"Actions",
+			"actions",
+			"Actions",
+			"BundleSizeAnalyzerPlugin",
+			"_onDataChannel",
+			"newConnection",
+			"file",
 			"magickcore",
 			"info",
 			"error",
@@ -676,29 +841,407 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 10,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "Dockerfile",
+					"file": "app/__tests__/actions/actions.jest.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 508,
+						"buffer_size": 3069,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								508,
-								508
+								2767,
+								2767
 							]
 						],
 						"settings":
 						{
-							"SL.13.region_keys":
+							"SL.68.region_keys":
+							[
+							],
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2713.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 14,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": ".dockerignore",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 49,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								49,
+								49
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": ".travis.yml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1357,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1065,
+								1065
+							]
+						],
+						"settings":
+						{
+							"SL.76.region_keys":
+							[
+							],
+							"syntax": "Packages/YAML/YAML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 330.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/home/binayak/projects/myclib/main.c",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6554,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/home/binayak/projects/myclib/test.c",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 479,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"SL.25.region_keys":
+							[
+							],
+							"syntax": "Packages/C++/C.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/home/binayak/projects/myclib/test.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 113,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/home/binayak/projects/samagick/pom.xml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 754,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/XML/XML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 166,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"auto_name": "Method threw 'java.lang.IllegalStateException' exc",
+							"default_dir": "/home/binayak/projects/myclib",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "app/package.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 982,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								725,
+								725
+							]
+						],
+						"settings":
+						{
+							"SL.36.region_keys":
+							[
+							],
+							"SL.77.region_keys":
+							[
+							],
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "app/components/UserName.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1598,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								493,
+								493
+							]
+						],
+						"settings":
+						{
+							"SL.67.region_keys":
+							[
+							],
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "app/components/UserInfoDisplay.js",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1265,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								993,
+								1001
+							]
+						],
+						"settings":
+						{
+							"SL.68.region_keys":
+							[
+							],
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "app/.babelrc",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 237,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								237,
+								237
+							]
+						],
+						"settings":
+						{
+							"SL.37.region_keys":
+							[
+							],
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "Dockerfile",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 563,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								268,
+								268
+							]
+						],
+						"settings":
+						{
+							"SL.78.region_keys":
 							[
 							],
 							"syntax": "Packages/Dockerfile Syntax Highlighting/Syntaxes/Dockerfile.sublime-syntax"
@@ -707,7 +1250,76 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "app/jest.config.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 306,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								77,
+								77
+							]
+						],
+						"settings":
+						{
+							"SL.39.region_keys":
+							[
+							],
+							"SL.70.region_keys":
+							[
+							],
+							"open_with_edit": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "app/jest.setup.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 120,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								120,
+								120
+							]
+						],
+						"settings":
+						{
+							"SL.41.region_keys":
+							[
+							],
+							"open_with_edit": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
@@ -719,7 +1331,7 @@
 	},
 	"input":
 	{
-		"height": 41.0
+		"height": 43.0
 	},
 	"layout":
 	{
@@ -769,6 +1381,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"main.",
+				"app/static/css/main.css"
+			],
 			[
 				"css",
 				"app/static/css/main.css"
@@ -882,7 +1498,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 246.0,
+	"side_bar_width": 300.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
