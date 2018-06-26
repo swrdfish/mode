@@ -2,15 +2,12 @@ const auth = (state = {}, action) => {
     let newState
     switch (action.type) {
         case 'LOGIN':
-            newState = {
+            return {
                 ref: action.ref,
                 uid: action.uid,
-                localIP: action.localIP
+                localIP: action.localIP,
+                username: action.username
             }
-            if (action.username) {
-                newState.username = action.username
-            }
-            return newState
         case 'SET_USERNAME':
             newState = {...state}
             newState.username = action.username
