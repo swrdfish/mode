@@ -64,5 +64,19 @@ describe('auth reducer', () => {
             uid,
             localIP
         })
+
+        let otherState = {
+            ...state,
+            username
+        }
+
+        let otherAction = {...action}
+        otherAction.username = "pumba"
+        expect(reducer(state, otherAction)).toEqual({
+            ref,
+            username: "pumba",
+            uid,
+            localIP
+        })
     })
 })

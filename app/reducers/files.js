@@ -1,10 +1,12 @@
+import produce from 'immer'
+
 
 const files = (state = {}, action) => {
     switch (action.type) {
         case 'ADD_FILE':
-            let newState = {...state}
-            newState[action.id] = action.files
-            return newState
+            return produce(state, draftState => {
+                draftState[action.id] = action.files                
+            })
         default:
             return state
     }
