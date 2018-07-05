@@ -1,3 +1,5 @@
+import produce from 'immer'
+
 const userList = (state = [], action) => {
     switch (action.type) {
         case 'ADD_USER':
@@ -9,34 +11,35 @@ const userList = (state = [], action) => {
         case 'CHG_USER':
             return state.map(user => {
                 if(action.userData.uid == user.uid) {
-                    return {
-                        ...action.userData,
-                        selected: user.selected,
-                        unseen: user.unseen
-                    }
+                    return produce(action.userData, draftState => {
+                        draftState.selected = user.selected
+                        draftState.unseen = user.unseen  
+                    })
                 } else {
                     return user
                 }
             })
         case 'ADD_MSG':
             return state.map(user => {
-                if(action.uid == user.uid && !user.selected) {
-                    user.unseen = user.unseen != undefined ? user.unseen + 1 : 1
-                }
-                return user
+                return produce(user, draftState => {
+                    if(action.uid == draftState.uid && !draftState.selected) {
+                        draftState.unseen = draftState.unseen != undefined ? draftState.unseen + 1 : 1
+                    }
+                })
             })
         case 'CHAT_USER':
             return state.map(user => {
-                if(action.uid == user.uid) {
-                    user.unseen = undefined
-                    user.selected = true
-                } else {
-                    user.selected = false
-                }
-                return user
+                return produce(user, draftState => {
+                    if(action.uid == draftState.uid) {
+                        draftState.unseen = undefined
+                        draftState.selected = true
+                    } else {
+                        draftState.selected = false
+                    }  
+                })
             })
         default:
-        return state
+            return state
     }
 }
 
