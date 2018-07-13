@@ -68,6 +68,10 @@ describe('userList reducer', () => {
             selected: true,
             unseen: 5
         }])
+
+        newUserData.uid = 4657
+
+        expect(reducer([userData], action)).toEqual([userData])
     })
 
     it('should handle ADD_MSG', () => {
@@ -112,7 +116,7 @@ describe('userList reducer', () => {
         let userData = {
             uid: 1234,
             foo: 'bar',
-            selected: true,
+            selected: false,
             unseen: 5
         }
 
@@ -127,5 +131,9 @@ describe('userList reducer', () => {
             selected: true,
             unseen: undefined
         }])
+
+        action.uid = 4567
+
+        expect(reducer([userData], action)).toEqual([userData])
     })
 })
