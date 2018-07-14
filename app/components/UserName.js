@@ -7,14 +7,15 @@ class UserName extends React.Component {
 		this.state = {editMode: 'OFF',
 					  value: 'connecting..'}
 
-		//bind event handlers to this
+		// bind event handlers to this
 		this.handleSpanOnClick = this.handleSpanOnClick.bind(this)
 		this.handleChange = this.handleChange.bind(this)
 		this.handleOnBlur = this.handleOnBlur.bind(this)
 		this.handleKeyPress = this.handleKeyPress.bind(this)
 	}
 
-	handleSpanOnClick() {
+	handleSpanOnClick(event) {
+		console.log(event)
 		if (this.props.value) {
 			this.setState({
 				editMode: 'ON',
@@ -50,7 +51,7 @@ class UserName extends React.Component {
 			return (
 				<span className="user-name" onClick={this.handleSpanOnClick}>
 				{this.props.value?this.props.value:"connecting.."} 
-				&nbsp;&nbsp;&nbsp;&nbsp;<span className="user-name-edit fa  fa-pencil" />
+				&nbsp;&nbsp;&nbsp;&nbsp;<span className="user-name-edit fa fa-pencil" />
 				</span>
 			)	
 		}
