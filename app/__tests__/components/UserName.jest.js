@@ -94,4 +94,14 @@ describe('Component: UserName', () => {
         expect(onUpdateUsername).toHaveBeenCalled()
         expect(wrapper.type()).toEqual('span')  
     })
+
+    it('should handle onKeypress event only for [Enter]', () => {
+        const onUpdateUsername = jest.fn()
+        const wrapper = shallow(<UserName value="foobar" onUpdateUsername={ onUpdateUsername } />)
+        wrapper.find(".user-name").simulate('click')
+        let mockedEvent = {key: 'Esc'}
+        wrapper.find(".user-name").simulate('keypress', mockedEvent)
+        expect(onUpdateUsername).not.toHaveBeenCalled()
+        expect(wrapper.type()).toEqual('input')  
+    })
 })

@@ -3,10 +3,10 @@ import UserProfilePicture from './UserProfilePicture'
 import UserName from './UserName'
 
 import { connect } from 'react-redux'
-import { setContactFilter, setUsername } from '../actions'
+import { setUsername } from '../actions'
 
 
-class UserInfoDisplay extends React.Component {
+export class UserInfoDisplay extends React.Component {
   
     constructor(props) {
         super(props)

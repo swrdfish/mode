@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: UserInfoDisplay should match previous snapshot 1`] = `
+<div
+  className="user-info-wrapper"
+>
+  <div
+    className="profile-picture"
+  />
+  <span
+    className="presence-active"
+  />
+    
+  <span
+    className="user-name"
+    onClick={[Function]}
+  >
+    foobar
+        
+    <span
+      className="user-name-edit fa fa-pencil"
+    />
+  </span>
+</div>
+`;
