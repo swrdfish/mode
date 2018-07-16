@@ -15,7 +15,6 @@ class UserName extends React.Component {
 	}
 
 	handleSpanOnClick(event) {
-		console.log(event)
 		if (this.props.value) {
 			this.setState({
 				editMode: 'ON',
@@ -25,7 +24,6 @@ class UserName extends React.Component {
 	}
 
 	handleChange(event) {
-		console.log("handleChange:", event.target.value)
 		this.setState({value: event.target.value});
 	}
 

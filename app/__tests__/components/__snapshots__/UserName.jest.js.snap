@@ -1,3 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component: UserName should match previous snapshot 1`] = `undefined`;
+exports[`Component: UserName should match previous snapshot 1`] = `
+<span
+  className="user-name"
+  onClick={[Function]}
+>
+  foobar
+      
+  <span
+    className="user-name-edit fa fa-pencil"
+  />
+</span>
+`;
+
+exports[`Component: UserName should match previous snapshot 2`] = `
+<span
+  className="user-name"
+  onClick={[Function]}
+>
+  connecting..
+      
+  <span
+    className="user-name-edit fa fa-pencil"
+  />
+</span>
+`;

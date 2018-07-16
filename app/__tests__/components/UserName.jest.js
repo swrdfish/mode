@@ -28,10 +28,12 @@ describe('Component: UserName', () => {
 
         const usernameWithValidName = renderer
             .create(<UserName value="foobar" onUpdateUsername={ onUpdateUsername } />)
-            .toJSON();
-        expect(usernameWithUndefinedName).toMatchSnapshot();
+            .toJSON()
+        expect(usernameWithValidName).toMatchSnapshot();
         const usernameWithUndefinedName = renderer
             .create(<UserName onUpdateUsername={ onUpdateUsername } />)
+            .toJSON()
+        expect(usernameWithUndefinedName).toMatchSnapshot();
     })
 
     it('should handle onClick event', () => {
@@ -72,5 +74,24 @@ describe('Component: UserName', () => {
         wrapper.find(".user-name").simulate('blur')        
         expect(spy).toHaveBeenCalled()
         expect(wrapper.type()).toEqual('span')
+    })
+
+    it('should handle onChange event', () => {
+        const onUpdateUsername = jest.fn()
+        const wrapper = shallow(<UserName value="foobar" onUpdateUsername={ onUpdateUsername } />)
+        wrapper.find(".user-name").simulate('click')
+        let mockedEvent = {target: {value: 'cazz'}}
+        wrapper.find(".user-name").simulate('change', mockedEvent)
+        expect(wrapper.state().value).toEqual('cazz')
+    })
+
+    it('should handle onKeypress event', () => {
+        const onUpdateUsername = jest.fn()
+        const wrapper = shallow(<UserName value="foobar" onUpdateUsername={ onUpdateUsername } />)
+        wrapper.find(".user-name").simulate('click')
+        let mockedEvent = {key: 'Enter'}
+        wrapper.find(".user-name").simulate('keypress', mockedEvent)
+        expect(onUpdateUsername).toHaveBeenCalled()
+        expect(wrapper.type()).toEqual('span')  
     })
 })
