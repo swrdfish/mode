@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import {unnotify} from '../actions'
 
 
-class NotificationArea extends React.Component {
+export class NotificationArea extends React.Component {
   constructor(props){
     super(props)
     this.handleClearNotification = this.handleClearNotification.bind(this)

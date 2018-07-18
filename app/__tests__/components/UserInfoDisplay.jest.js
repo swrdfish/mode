@@ -19,6 +19,17 @@ describe('Component: UserInfoDisplay', () => {
         expect(wrapper.find("UserName")).toHaveLength(1)
     })
 
+    it('should render the component properly with username and uid set to undefined', () => {
+        const auth = {
+            localIP: '127.0.0.1'
+        }
+        const wrapper = shallow(<UserInfoDisplay auth={auth} />);
+        expect(wrapper.find(".user-info-wrapper")).toHaveLength(1)
+        expect(wrapper.find(UserProfilePicture)).toHaveLength(1)
+        expect(wrapper.find("span")).toHaveLength(1)
+        expect(wrapper.find("UserName")).toHaveLength(1)
+    })
+
     it('should match previous snapshot', () => {
         const auth = {
             username: 'foobar',

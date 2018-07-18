@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: SearchBar should match previous snapshot 1`] = `
+<div
+  className="search-wrapper"
+>
+  <input
+    onChange={[Function]}
+    onKeyDown={[Function]}
+    placeholder="search users"
+    type="text"
+    value=""
+  />
+  <i
+    aria-hidden="true"
+    className="fa fa-search"
+  />
+</div>
+`;

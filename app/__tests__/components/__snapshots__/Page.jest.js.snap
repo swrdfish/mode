@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: Page should match previous snapshot 1`] = `
+<div
+  className="row"
+  id="main-window"
+>
+  <div>
+    hello
+  </div>
+</div>
+`;
