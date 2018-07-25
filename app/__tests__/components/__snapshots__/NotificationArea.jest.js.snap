@@ -3,5 +3,26 @@
 exports[`Component: NotificationArea should match previous snapshot 1`] = `
 <div
   className="notification-area"
-/>
+>
+  <div
+    className="notification"
+  >
+    <i
+      aria-hidden="true"
+      className="fa fa-close clear-notification"
+      data-notification-idx={0}
+      onClick={[Function]}
+    />
+  </div>
+  <div
+    className="notification error"
+  >
+    <i
+      aria-hidden="true"
+      className="fa fa-close clear-notification"
+      data-notification-idx={1}
+      onClick={[Function]}
+    />
+  </div>
+</div>
 `;
