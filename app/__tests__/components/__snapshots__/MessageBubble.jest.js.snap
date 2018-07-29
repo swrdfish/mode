@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: MessageBubble should match previous snapshot 1`] = `
+<div
+  className="message-bubble-wrapper"
+>
+  <div
+    className="message-bubble"
+  >
+    <span
+      className="message-bubble-body"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "hello world",
+        }
+      }
+    />
+    <span
+      className="time-stamp"
+    >
+      1,502,265,600,000
+    </span>
+  </div>
+</div>
+`;

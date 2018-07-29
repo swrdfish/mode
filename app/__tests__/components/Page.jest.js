@@ -4,7 +4,7 @@ import Page from '../../components/Page'
 import renderer from 'react-test-renderer';
 
 describe('Component: Page', () => {
-    it('should render the profile picture', () => {
+    it('should render the page', () => {
         const wrapper = shallow(<Page><span>hello</span></Page>)
         expect(wrapper.find("#main-window")).toHaveLength(1)
         expect(wrapper.find('span')).toHaveLength(1)

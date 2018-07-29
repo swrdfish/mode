@@ -4,7 +4,7 @@ import { NotificationArea } from '../../components/NotificationArea'
 import renderer from 'react-test-renderer'
 
 describe('Component: NotificationArea', () => {
-    it('should render the profile picture', () => {
+    it('should render notifications', () => {
         const wrapper = shallow(<NotificationArea notifications={[]}/>)
         expect(wrapper.find(".notification-area")).toHaveLength(1)
     })

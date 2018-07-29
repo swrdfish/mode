@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: MessageViewer should match previous snapshot 1`] = `
+<div
+  className="message-view-wrapper"
+>
+  <div
+    className="empty-message-view"
+  >
+    Say something!
+  </div>
+</div>
+`;
