@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: MessageArea should match previous snapshot 1`] = `
+<div
+  className="col-md-8"
+  id="message-area"
+>
+  <div
+    className="message-view-wrapper"
+  >
+    <div
+      className="messages-scrollable"
+    >
+      <div
+        className="message-bubble-wrapper"
+      >
+        <div
+          className="message-bubble"
+        >
+          <span
+            className="message-bubble-body"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "undefined",
+              }
+            }
+          />
+          <span
+            className="time-stamp"
+          >
+            1,502,265,600,000
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="input-area-wrapper"
+  >
+    <input
+      className="input-area-inputfiled"
+      onChange={[Function]}
+      onKeyPress={[Function]}
+      placeholder="Type message"
+      type="text"
+      value=""
+    />
+    <div
+      className="file-input-wrapper fa fa-paperclip"
+    >
+      <input
+        aria-hidden="true"
+        className="file-input"
+        id="attach-button"
+        multiple="multiple"
+        name="file-input"
+        onChange={[Function]}
+        type="file"
+      />
+    </div>
+  </div>
+</div>
+`;

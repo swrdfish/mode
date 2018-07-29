@@ -7,7 +7,7 @@ import MessageViewer from './MessageViewer.js'
 import {addMessage, addFiles} from '../actions'
 
 
-class MessageArea extends React.Component {
+export class MessageArea extends React.Component {
     constructor(props) {
         super(props)
         this.onSendMessage = this.onSendMessage.bind(this)
